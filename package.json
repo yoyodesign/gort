@@ -9,10 +9,13 @@
     "mocha": "^3.2.0",
     "node-sass": "^4.5.2",
     "sass-true": "^2.2.1",
-    "sassdoc": "^2.2.2"
+    "sassdoc": "^2.2.2",
+    "stylelint": "^7.10.1",
+    "stylelint-scss": "^1.4.4"
   },
   "scripts": {
-    "test": "mocha",
+    "lint": "stylelint ./src/**/*.scss",
+    "test": "yarn lint && mocha",
     "docs": "sassdoc ./src"
   }
 }
