@@ -15,7 +15,7 @@
 }
 
 /// Renders visuallyhidden class.
-/// @param {String} $selector [".visuallyhidden"] - Selector string
+/// @param {String} $selector [".visuallyhidden"] - Optional selector string
 @mixin visuallyhidden-class($selector: ".visuallyhidden") {
 	#{$selector} {
 		@include visuallyhidden;
