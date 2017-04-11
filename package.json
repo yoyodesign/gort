@@ -1,0 +1,18 @@
+{
+  "name": "gort",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:yoyodesign/gort",
+  "author": "Calvin Davis <calvin.davis@yoyodesign.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.2.0",
+    "node-sass": "^4.5.2",
+    "sass-true": "^2.2.1",
+    "sassdoc": "^2.2.2"
+  },
+  "scripts": {
+    "test": "mocha",
+    "docs": "sassdoc ./src"
+  }
+}

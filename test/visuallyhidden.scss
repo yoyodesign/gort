@@ -1,0 +1,62 @@
+@include test-module("visuallyhidden") {
+	@include test("visuallyhidden") {
+		@include assert {
+			@include output {
+				@include visuallyhidden;
+			}
+
+			@include expect {
+				position: absolute;
+				overflow: hidden;
+				padding: 0;
+				width: 1px;
+				height: 1px;
+				margin: -1px;
+				border: 0;
+				clip: rect(0, 0, 0, 0);
+			}
+		}
+	}
+
+	@include test("visuallyhidden-class()") {
+		@include assert {
+			@include output {
+				@include visuallyhidden-class;
+			}
+
+			@include expect {
+				.visuallyhidden {
+					position: absolute;
+					overflow: hidden;
+					padding: 0;
+					width: 1px;
+					height: 1px;
+					margin: -1px;
+					border: 0;
+					clip: rect(0, 0, 0, 0);
+				}
+			}
+		}
+	}
+
+	@include test("visuallyhidden-class(\".foo\")") {
+		@include assert {
+			@include output {
+				@include visuallyhidden-class(".foo");
+			}
+
+			@include expect {
+				.foo {
+					position: absolute;
+					overflow: hidden;
+					padding: 0;
+					width: 1px;
+					height: 1px;
+					margin: -1px;
+					border: 0;
+					clip: rect(0, 0, 0, 0);
+				}
+			}
+		}
+	}
+}

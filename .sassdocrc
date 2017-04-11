@@ -1,0 +1,6 @@
+{
+	"dest": "./docs",
+	"package": {
+		"title": "Yoyo – Sass Library POC"
+	}
+}
