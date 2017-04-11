@@ -1,0 +1,24 @@
+////
+/// @author Calvin Davis
+/// @author Mike Masey
+////
+
+/// Applies audio-only styling.
+@mixin audio-only {
+	position: absolute;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+}
+
+/// Renders audio-only class.
+/// @param {String} $selector [".audio-only"] - Optional selector string
+@mixin audio-only-class($selector: ".audio-only") {
+	#{$selector} {
+		@include audio-only;
+	}
+}

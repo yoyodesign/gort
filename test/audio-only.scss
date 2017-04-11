@@ -1,8 +1,8 @@
-@include test-module("visuallyhidden") {
-	@include test("visuallyhidden") {
+@include test-module("audio-only") {
+	@include test("audio-only") {
 		@include assert {
 			@include output {
-				@include visuallyhidden;
+				@include audio-only;
 			}
 
 			@include expect {
@@ -18,14 +18,14 @@
 		}
 	}
 
-	@include test("visuallyhidden-class()") {
+	@include test("audio-only-class()") {
 		@include assert {
 			@include output {
-				@include visuallyhidden-class;
+				@include audio-only-class;
 			}
 
 			@include expect {
-				.visuallyhidden {
+				.audio-only {
 					position: absolute;
 					overflow: hidden;
 					padding: 0;
@@ -39,10 +39,10 @@
 		}
 	}
 
-	@include test("visuallyhidden-class(\".foo\")") {
+	@include test("audio-only-class(\".foo\")") {
 		@include assert {
 			@include output {
-				@include visuallyhidden-class(".foo");
+				@include audio-only-class(".foo");
 			}
 
 			@include expect {
