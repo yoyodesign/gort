@@ -1,0 +1,18 @@
+////
+/// @author Tom (Alfie) Gaskill
+////
+
+/// Add a percentage value for padding-bottom on the ::after pseudo element to maintain the aspect ratio of the parent e.g. 56.25% would be an aspect ratio of 16:9.
+/// @link https://www.w3schools.com/howto/howto_css_aspect_ratio.asp
+/// @param {Percentage} $ratio [100%] - Aspect ratio as a percentage
+@mixin aspect-ratio($ratio: 100%) {
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		display: block;
+		height: 0;
+		padding-bottom: $ratio;
+	}
+}

@@ -1,6 +1,7 @@
 @import "true";
 @import "../src/gort";
 
+@import "aspect-ratio";
 @import "audio-only";
 
 @include report;
