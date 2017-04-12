@@ -14,8 +14,8 @@
     "stylelint-scss": "^1.4.4"
   },
   "scripts": {
-    "lint": "stylelint ./src/**/*.scss",
+    "lint": "stylelint ./lib/**/*.scss",
     "test": "yarn lint && mocha",
-    "docs": "sassdoc ./src"
+    "docs": "sassdoc ./lib"
   }
 }
