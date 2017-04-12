@@ -15,7 +15,8 @@
   },
   "scripts": {
     "lint": "stylelint ./lib/**/*.scss",
-    "test": "yarn lint && mocha",
+    "unit": "mocha",
+    "test": "yarn lint && yarn unit",
     "docs": "sassdoc ./lib"
   }
 }
