@@ -14,7 +14,7 @@
     "stylelint-scss": "^1.4.4"
   },
   "scripts": {
-    "lint": "stylelint ./lib/**/*.scss",
+    "lint": "stylelint ./**/*.scss",
     "unit": "mocha",
     "test": "yarn lint && yarn unit",
     "docs": "sassdoc ./lib"
