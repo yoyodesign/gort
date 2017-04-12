@@ -5,6 +5,7 @@
 	"rules": {
 		"declaration-block-semicolon-newline-after": "always",
 		"declaration-block-semicolon-space-before": "never",
+		"length-zero-no-unit": true,
 		"scss/at-mixin-argumentless-call-parentheses": "never",
 		"scss/dollar-variable-colon-space-after": "always",
 		"scss/dollar-variable-colon-space-before": "never"

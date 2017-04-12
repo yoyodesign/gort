@@ -1,0 +1,217 @@
+@include test-module("arrow") {
+	@include test("arrow") {
+		@include assert {
+			@include output {
+				@include arrow;
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 5px;
+				border-bottom-width: 5px;
+				border-left-width: 10px;
+				border-left-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(\"up\")") {
+		@include assert {
+			@include output {
+				@include arrow("up");
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-left-width: 5px;
+				border-right-width: 5px;
+				border-bottom-width: 10px;
+				border-bottom-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(\"right\")") {
+		@include assert {
+			@include output {
+				@include arrow("right");
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 5px;
+				border-bottom-width: 5px;
+				border-left-width: 10px;
+				border-left-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(\"down\")") {
+		@include assert {
+			@include output {
+				@include arrow("down");
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-right-width: 5px;
+				border-left-width: 5px;
+				border-top-width: 10px;
+				border-top-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(\"left\")") {
+		@include assert {
+			@include output {
+				@include arrow("left");
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-bottom-width: 5px;
+				border-top-width: 5px;
+				border-right-width: 10px;
+				border-right-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow($width: 20px)") {
+		@include assert {
+			@include output {
+				@include arrow($width: 20px);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 10px;
+				border-bottom-width: 10px;
+				border-left-width: 20px;
+				border-left-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow($width: 1em)") {
+		@include assert {
+			@include output {
+				@include arrow($width: 1em);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 0.5em;
+				border-bottom-width: 0.5em;
+				border-left-width: 1em;
+				border-left-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow($height: 20px)") {
+		@include assert {
+			@include output {
+				@include arrow($height: 20px);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 5px;
+				border-bottom-width: 5px;
+				border-left-width: 20px;
+				border-left-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow($height: 1em)") {
+		@include assert {
+			@include output {
+				@include arrow($height: 1em);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 5px;
+				border-bottom-width: 5px;
+				border-left-width: 1em;
+				border-left-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow($width: 15px, $height: 20px)") {
+		@include assert {
+			@include output {
+				@include arrow($width: 15px, $height: 20px);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 7.5px;
+				border-bottom-width: 7.5px;
+				border-left-width: 20px;
+				border-left-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow($width: 1em, $height: 10px)") {
+		@include assert {
+			@include output {
+				@include arrow($width: 1em, $height: 10px);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 0.5em;
+				border-bottom-width: 0.5em;
+				border-left-width: 10px;
+				border-left-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow($color: #000000)") {
+		@include assert {
+			@include output {
+				@include arrow($color: #000000);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-top-width: 5px;
+				border-bottom-width: 5px;
+				border-left-width: 10px;
+				border-left-color: #000000;
+			}
+		}
+	}
+}

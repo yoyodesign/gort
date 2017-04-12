@@ -1,0 +1,42 @@
+////
+/// @author Calvin Davis
+////
+
+/// Creates a CSS arrow.
+/// @param {String} $direction  ["right"] - Arrow direction. Can be `"up"`, `"right"`, `"down"`, or `"left"`
+/// @param {Number} $width [10px] - Base length of arrow
+/// @param {Number} $height [$width] - Height of arrow
+/// @param {Color} $color [currentColor] - Color of arrow
+@mixin arrow($direction: "right", $width: 10px, $height: null, $color: currentColor) {
+	$height: if($height == null, $width, $height);
+	$half-width: $width / 2;
+	$base: left;
+	$left: top;
+	$right: bottom;
+
+	@if ($direction == "up") {
+		$base: bottom;
+		$left: left;
+		$right: right;
+	}
+
+	@if ($direction == "down") {
+		$base: top;
+		$left: right;
+		$right: left;
+	}
+
+	@if ($direction == "left") {
+		$base: right;
+		$left: bottom;
+		$right: top;
+	}
+
+	width: 0;
+	height: 0;
+	border: 0 solid transparent;
+	border-#{$left}-width: $half-width;
+	border-#{$right}-width: $half-width;
+	border-#{$base}-width: $height;
+	border-#{$base}-color: $color;
+}
