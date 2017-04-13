@@ -3,6 +3,7 @@
 ////
 
 /// Applies clearfix styling.
+/// @link http://cssmojo.com/the-very-latest-clearfix-reloaded/
 @mixin clearfix {
 	&:after {
 		content: "";
