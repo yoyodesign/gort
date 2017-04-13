@@ -9,6 +9,7 @@
 /// @param {Number} $width [10px] - Base length of arrow
 /// @param {Number} $height [$width] - Height of arrow
 /// @param {Color} $color [currentColor] - Color of arrow
+/// @link https://css-tricks.com/snippets/css/css-triangle/
 @mixin arrow($direction: "right", $width: 10px, $height: null, $color: currentColor) {
 	$height: if($height == null, $width, $height);
 	$half-width: $width / 2;
