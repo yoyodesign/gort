@@ -2,18 +2,22 @@
 	@include test("audio-only") {
 		@include assert {
 			@include output {
-				@include audio-only;
+				.foo {
+					@include audio-only;
+				}
 			}
 
 			@include expect {
-				position: absolute;
-				overflow: hidden;
-				padding: 0;
-				width: 1px;
-				height: 1px;
-				margin: -1px;
-				border: 0;
-				clip: rect(0, 0, 0, 0);
+				.foo {
+					position: absolute;
+					overflow: hidden;
+					padding: 0;
+					width: 1px;
+					height: 1px;
+					margin: -1px;
+					border: 0;
+					clip: rect(0, 0, 0, 0);
+				}
 			}
 		}
 	}
