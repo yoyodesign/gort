@@ -5,9 +5,7 @@
 /// Sets `width` and `height`.
 /// @param {Number} $width [0]
 /// @param {Number} $height [$width]
-@mixin size($width: 0, $height: null) {
-	$height: if($height == null, $width, $height);
-
+@mixin size($width: 0, $height: $width) {
 	width: $width;
 	height: $height;
 }
