@@ -2,6 +2,8 @@
 /// @author Calvin Davis
 ////
 
+@import "size";
+
 /// Creates a CSS arrow.
 /// @param {String} $direction  ["right"] - Arrow direction. Can be `"up"`, `"right"`, `"down"`, or `"left"`
 /// @param {Number} $width [10px] - Base length of arrow
@@ -32,8 +34,7 @@
 		$right: top;
 	}
 
-	width: 0;
-	height: 0;
+	@include size;
 	border: 0 solid transparent;
 	border-#{$left}-width: $half-width;
 	border-#{$right}-width: $half-width;
