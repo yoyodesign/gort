@@ -3,6 +3,8 @@
 		"stylelint-scss"
 	],
 	"rules": {
+		"declaration-colon-space-after": "always",
+		"declaration-colon-space-before": "never",
 		"declaration-block-semicolon-newline-after": "always",
 		"declaration-block-semicolon-space-before": "never",
 		"length-zero-no-unit": true,
