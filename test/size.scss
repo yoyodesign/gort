@@ -1,0 +1,53 @@
+@include test-module("size") {
+	@include test("size") {
+		@include assert {
+			@include output {
+				@include size;
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+
+	@include test("size(100px)") {
+		@include assert {
+			@include output {
+				@include size(100px);
+			}
+
+			@include expect {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+
+	@include test("size($height: 50px)") {
+		@include assert {
+			@include output {
+				@include size($height: 50px);
+			}
+
+			@include expect {
+				width: 0;
+				height: 50px;
+			}
+		}
+	}
+
+	@include test("size(100px, 50px)") {
+		@include assert {
+			@include output {
+				@include size(100px, 50px);
+			}
+
+			@include expect {
+				width: 100px;
+				height: 50px;
+			}
+		}
+	}
+}
