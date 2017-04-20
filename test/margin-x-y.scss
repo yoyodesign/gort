@@ -1,0 +1,69 @@
+@include test-module("margin-x-y") {
+	@include test("margin-x") {
+		@include assert {
+			@include output {
+				.foo {
+					@include margin-x;
+				}
+			}
+
+			@include expect {
+				.foo {
+					margin-right: 0;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	@include test("margin-x(1em)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include margin-x(1em);
+				}
+			}
+
+			@include expect {
+				.foo {
+					margin-right: 1em;
+					margin-left: 1em;
+				}
+			}
+		}
+	}
+
+	@include test("margin-y") {
+		@include assert {
+			@include output {
+				.foo {
+					@include margin-y;
+				}
+			}
+
+			@include expect {
+				.foo {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@include test("margin-y(1em)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include margin-y(1em);
+				}
+			}
+
+			@include expect {
+				.foo {
+					margin-top: 1em;
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+}
