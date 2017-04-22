@@ -38,4 +38,24 @@
 			}
 		}
 	}
+
+	@include test("breakpoint(max-width 1024px)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include breakpoint(max-width 1024px) {
+						color: red;
+					}
+				}
+			}
+
+			@include expect {
+				@media (max-width: 1024px) {
+					.foo {
+						color: red;
+					}
+				}
+			}
+		}
+	}
 }

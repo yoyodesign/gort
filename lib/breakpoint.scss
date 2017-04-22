@@ -28,12 +28,18 @@
 				@content;
 			}
 		}
+
+		@if ($type-a == string and $type-b == number) {
+			@include breakpoint-query($a, $b) {
+				@content;
+			}
+		}
 	}
 }
 
 /// @param {Number} $min
 @mixin breakpoint-min-width($min) {
-	@media (min-width: $min) {
+	@include breakpoint-query(min-width, $min) {
 		@content;
 	}
 }
@@ -42,6 +48,14 @@
 /// @param {Number} $max
 @mixin breakpoint-between-widths($min, $max) {
 	@media (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}
+
+/// @param {String} $property
+/// @param {Number} $value
+@mixin breakpoint-query($property, $value) {
+	@media ($property: $value) {
 		@content;
 	}
 }
