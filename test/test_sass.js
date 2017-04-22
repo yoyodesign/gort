@@ -1,7 +1,7 @@
-var path = require('path');
-var sassTrue = require('sass-true');
+var path = require("path");
+var sassTrue = require("sass-true");
 
-var sassFile = path.join(__dirname, 'test.scss');
+var sassFile = path.join(__dirname, "_test.scss");
 
 sassTrue.runSass({
 	file: sassFile
