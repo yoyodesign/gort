@@ -3,6 +3,24 @@
 ////
 
 /// @param {List} $query
+/// @example scss
+/// 	$mobile: max-width 560px;
+/// 	$tablet: 561px 1024px;
+/// 	$desktop: 1025px;
+///
+/// 	body {
+/// 		@include breakpoint($mobile) {
+/// 			font-size: 14px;
+/// 		}
+///
+/// 		@include breakpoint($tablet) {
+/// 			font-size: 16px;
+/// 		}
+///
+/// 		@include breakpoint($desktop) {
+/// 			font-size: 18px;
+/// 		}
+/// 	}
 @mixin breakpoint($query) {
 	$length: length($query);
 
