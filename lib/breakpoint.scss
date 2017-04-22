@@ -1,0 +1,21 @@
+////
+/// @author Calvin Davis
+////
+
+@mixin breakpoint($query) {
+	$length: length($query);
+
+	@if ($length == 1) {
+		@include breakpoint-min-width($query) {
+			@content;
+		}
+	}
+}
+
+@mixin breakpoint-min-width($query) {
+	$value: nth($query, 1);
+
+	@media (min-width: $value) {
+		@content;
+	}
+}

@@ -1,0 +1,21 @@
+@include test-module("breakpoint") {
+	@include test("breakpoint(400px)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include breakpoint(400px) {
+						color: red;
+					}
+				}
+			}
+
+			@include expect {
+				@media (min-width: 400px) {
+					.foo {
+						color: red;
+					}
+				}
+			}
+		}
+	}
+}
