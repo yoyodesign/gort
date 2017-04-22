@@ -2,20 +2,46 @@
 /// @author Calvin Davis
 ////
 
+/// @param {List} $query
 @mixin breakpoint($query) {
 	$length: length($query);
 
 	@if ($length == 1) {
-		@include breakpoint-min-width($query) {
-			@content;
+		$a: nth($query, 1);
+		$type-a: type-of($a);
+
+		@if ($type-a == number) {
+			@include breakpoint-min-width($query) {
+				@content;
+			}
+		}
+	}
+
+	@else if ($length == 2) {
+		$a: nth($query, 1);
+		$type-a: type-of($a);
+		$b: nth($query, 2);
+		$type-b: type-of($b);
+
+		@if $type-a == number and $type-b == number {
+			@include breakpoint-between-widths($a, $b) {
+				@content;
+			}
 		}
 	}
 }
 
-@mixin breakpoint-min-width($query) {
-	$value: nth($query, 1);
+/// @param {Number} $min
+@mixin breakpoint-min-width($min) {
+	@media (min-width: $min) {
+		@content;
+	}
+}
 
-	@media (min-width: $value) {
+/// @param {Number} $min
+/// @param {Number} $max
+@mixin breakpoint-between-widths($min, $max) {
+	@media (min-width: $min) and (max-width: $max) {
 		@content;
 	}
 }
