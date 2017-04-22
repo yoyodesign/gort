@@ -2,6 +2,9 @@
 /// @author Calvin Davis
 ////
 
+@import "_breakpoint-between-widths";
+@import "_breakpoint-query";
+
 /// @param {List} $query
 /// @example scss
 /// 	$mobile: max-width 560px;
@@ -52,25 +55,5 @@
 				@content;
 			}
 		}
-	}
-}
-
-/// @param {Number} $min
-/// @param {Number} $max
-/// @access private
-/// @todo Refactor into own file and add tests.
-@mixin _breakpoint-between-widths($min, $max) {
-	@media (min-width: $min) and (max-width: $max) {
-		@content;
-	}
-}
-
-/// @param {String} $property
-/// @param {Number} $value
-/// @access private
-/// @todo Refactor into own file and add tests.
-@mixin _breakpoint-query($property, $value) {
-	@media ($property: $value) {
-		@content;
 	}
 }
