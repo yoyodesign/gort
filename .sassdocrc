@@ -2,5 +2,8 @@
 	"dest": "./docs",
 	"package": {
 		"title": "Gort"
+	},
+	"groups": {
+		"breakpoint": "Breakpoint"
 	}
 }
