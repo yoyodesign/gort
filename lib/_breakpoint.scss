@@ -29,7 +29,7 @@
 		$type-a: type-of($a);
 
 		@if ($type-a == number) {
-			@include breakpoint-min-width($query) {
+			@include _breakpoint-query(min-width, $a) {
 				@content;
 			}
 		}
@@ -42,13 +42,13 @@
 		$type-b: type-of($b);
 
 		@if $type-a == number and $type-b == number {
-			@include breakpoint-between-widths($a, $b) {
+			@include _breakpoint-between-widths($a, $b) {
 				@content;
 			}
 		}
 
 		@if ($type-a == string and $type-b == number) {
-			@include breakpoint-query($a, $b) {
+			@include _breakpoint-query($a, $b) {
 				@content;
 			}
 		}
@@ -56,15 +56,10 @@
 }
 
 /// @param {Number} $min
-@mixin breakpoint-min-width($min) {
-	@include breakpoint-query(min-width, $min) {
-		@content;
-	}
-}
-
-/// @param {Number} $min
 /// @param {Number} $max
-@mixin breakpoint-between-widths($min, $max) {
+/// @access private
+/// @todo Refactor into own file and add tests.
+@mixin _breakpoint-between-widths($min, $max) {
 	@media (min-width: $min) and (max-width: $max) {
 		@content;
 	}
@@ -73,7 +68,8 @@
 /// @param {String} $property
 /// @param {Number} $value
 /// @access private
-@mixin breakpoint-query($property, $value) {
+/// @todo Refactor into own file and add tests.
+@mixin _breakpoint-query($property, $value) {
 	@media ($property: $value) {
 		@content;
 	}
