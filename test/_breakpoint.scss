@@ -59,6 +59,46 @@
 		}
 	}
 
+	@include test("breakpoint((max-width 1024px) (orientation landscape))") {
+		@include assert {
+			@include output {
+				.foo {
+					@include breakpoint((max-width 1024px) (orientation landscape)) {
+						color: red;
+					}
+				}
+			}
+
+			@include expect {
+				@media (max-width: 1024px) and (orientation: landscape) {
+					.foo {
+						color: red;
+					}
+				}
+			}
+		}
+	}
+
+	@include test("breakpoint(((max-width 1024px), (orientation landscape)))") {
+		@include assert {
+			@include output {
+				.foo {
+					@include breakpoint(((max-width 1024px), (orientation landscape))) {
+						color: red;
+					}
+				}
+			}
+
+			@include expect {
+				@media (max-width: 1024px), (orientation: landscape) {
+					.foo {
+						color: red;
+					}
+				}
+			}
+		}
+	}
+
 	@include test("multiple breakpoints") {
 		@include assert {
 			@include output {

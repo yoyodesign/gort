@@ -4,6 +4,7 @@
 ////
 
 @import "_breakpoint-between-widths";
+@import "_breakpoint-queries";
 @import "_breakpoint-query";
 
 /// @param {List} $query
@@ -28,7 +29,13 @@
 @mixin breakpoint($query) {
 	$length: length($query);
 
-	@if ($length == 1) {
+	@if (type-of(nth($query, 1)) == list) {
+		@include _breakpoint-queries($query) {
+			@content;
+		}
+	}
+
+	@else if ($length == 1) {
 		$a: nth($query, 1);
 		$type-a: type-of($a);
 
@@ -51,7 +58,7 @@
 			}
 		}
 
-		@if ($type-a == string and $type-b == number) {
+		@else if ($type-a == string and $type-b == number) {
 			@include _breakpoint-query($a, $b) {
 				@content;
 			}

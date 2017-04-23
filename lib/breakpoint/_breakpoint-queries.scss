@@ -1,0 +1,28 @@
+////
+/// @author Calvin Davis
+////
+
+/// @param {List} $queries
+/// @access private
+@mixin _breakpoint-queries($queries) {
+	$list: "";
+	$is-first: true;
+	$separator: if(list-separator($queries) == space, " and ", ", ");
+
+	@each $query in $queries {
+		$property: nth($query, 1);
+		$value: nth($query, 2);
+
+		@if ($is-first) {
+			$is-first: false;
+		} @else {
+			$list: $list + $separator;
+		}
+
+		$list: $list + "(#{$property}: #{$value})";
+	}
+
+	@media #{$list} {
+		@content;
+	}
+}
