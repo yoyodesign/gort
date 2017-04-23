@@ -3,7 +3,6 @@
 /// @author Calvin Davis
 ////
 
-@import "_breakpoint-between-widths";
 @import "_breakpoint-queries";
 @import "_breakpoint-query";
 
@@ -53,7 +52,7 @@
 		$type-b: type-of($b);
 
 		@if $type-a == number and $type-b == number {
-			@include _breakpoint-between-widths($a, $b) {
+			@include _breakpoint-queries((min-width $a) (max-width $b)) {
 				@content;
 			}
 		}
