@@ -1,0 +1,42 @@
+@include test-module("_font-face-content") {
+	@include test("_font-face-content(\"Foo\", \"fonts/foo\")") {
+		@include assert {
+			@include output {
+				@include _font-face-content("Foo", "fonts/foo");
+			}
+
+			@include expect {
+				font-family: "Foo";
+				src: url("fonts/foo.woff2") format("woff2"), url("fonts/foo.woff") format("woff");
+			}
+		}
+	}
+
+	@include test("_font-face-content(\"Foo Bold\", \"fonts/foo-bold\", 700)") {
+		@include assert {
+			@include output {
+				@include _font-face-content("Foo Bold", "fonts/foo-bold", 700);
+			}
+
+			@include expect {
+				font-family: "Foo Bold";
+				src: url("fonts/foo-bold.woff2") format("woff2"), url("fonts/foo-bold.woff") format("woff");
+				font-weight: 700;
+			}
+		}
+	}
+
+	@include test("_font-face-content(\"Foo Bold\", \"fonts/foo-bold\", 700, (ttf: truetype))") {
+		@include assert {
+			@include output {
+				@include _font-face-content("Foo Bold", "fonts/foo-bold", 700, (ttf: truetype));
+			}
+
+			@include expect {
+				font-family: "Foo Bold";
+				src: url("fonts/foo-bold.ttf") format("truetype");
+				font-weight: 700;
+			}
+		}
+	}
+}

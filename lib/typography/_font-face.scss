@@ -1,0 +1,18 @@
+////
+/// @group typography
+/// @author Calvin Davis
+////
+
+@import "font-face-content";
+@import "gort-default-font-face-formats";
+
+/// Outputs `@font-face` directive.
+/// @param {String} $family - Font family
+/// @param {String} $path - Path to font files (not including file extensions)
+/// @param {Weight} $weight [null] - Font weight
+/// @param {List} $formats [$gort-default-font-face-formats] - List of formats
+@mixin font-face($family, $path, $weight: null, $formats: $gort-default-font-face-formats) {
+	@font-face {
+		@include _font-face-content($family, $path, $weight, $formats);
+	}
+}
