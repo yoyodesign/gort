@@ -15,7 +15,9 @@
 
 		@if ($is-first) {
 			$is-first: false;
-		} @else {
+		}
+
+		@else {
 			$list: $list + $separator;
 		}
 
