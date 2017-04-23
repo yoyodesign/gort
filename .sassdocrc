@@ -4,6 +4,7 @@
 		"title": "Gort"
 	},
 	"groups": {
-		"breakpoint": "Breakpoint"
+		"breakpoint": "Breakpoint",
+		"typography": "Typography"
 	}
 }
