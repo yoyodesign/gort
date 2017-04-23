@@ -4,7 +4,6 @@
 ////
 
 @import "_breakpoint-queries";
-@import "_breakpoint-query";
 
 /// @param {List} $query
 /// @example scss
@@ -39,7 +38,7 @@
 		$type-a: type-of($a);
 
 		@if ($type-a == number) {
-			@include _breakpoint-query(min-width, $a) {
+			@include _breakpoint-queries(min-width $a) {
 				@content;
 			}
 		}
@@ -58,7 +57,7 @@
 		}
 
 		@else if ($type-a == string and $type-b == number) {
-			@include _breakpoint-query($a, $b) {
+			@include _breakpoint-queries($a $b) {
 				@content;
 			}
 		}

@@ -3,6 +3,9 @@
 /// @author Calvin Davis
 ////
 
+@import "breakpoint-get-property-value-string";
+@import "breakpoint-is-property-value-pair";
+
 /// @param {List} $queries
 /// @access private
 @mixin _breakpoint-queries($queries) {
@@ -10,19 +13,21 @@
 	$is-first: true;
 	$separator: if(list-separator($queries) == space, " and ", ", ");
 
-	@each $query in $queries {
-		$property: nth($query, 1);
-		$value: nth($query, 2);
+	@if (_breakpoint-is-property-value-pair($queries)) {
+		$list: _breakpoint-get-property-value-string($queries);
+	}
+	@else {
+		@each $query in $queries {
+			@if ($is-first) {
+				$is-first: false;
+			}
 
-		@if ($is-first) {
-			$is-first: false;
+			@else {
+				$list: $list + $separator;
+			}
+
+			$list: $list + _breakpoint-get-property-value-string($query);
 		}
-
-		@else {
-			$list: $list + $separator;
-		}
-
-		$list: $list + "(#{$property}: #{$value})";
 	}
 
 	@media #{$list} {

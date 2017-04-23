@@ -1,0 +1,19 @@
+////
+/// group breakpoint
+/// @author Calvin Davis
+////
+
+/// @access private
+/// @param {List} $list
+/// @returns {Boolean}
+@function _breakpoint-is-property-value-pair($list) {
+	$is-pair: length($list) == 2;
+
+	@if not $is-pair {
+		@return false;
+	}
+
+	$property: nth($list, 1);
+
+	@return type-of($property) == string;
+}
