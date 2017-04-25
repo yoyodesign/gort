@@ -48,11 +48,11 @@
 			}
 		}
 	}
-	@include test("align-center(\"xy\", absolute)") {
+	@include test("align-center($position: absolute)") {
 		@include assert {
 			@include output {
 				.foo {
-					@include align-center("xy", absolute);
+					@include align-center($position: absolute);
 				}
 			}
 
@@ -66,21 +66,22 @@
 			}
 		}
 	}
-	@include test("align-center(\"y\", relative)") {
+	@include test("align-center(\"y\", absolute)") {
 		@include assert {
 			@include output {
 				.foo {
-					@include align-center("y", relative);
+					@include align-center("y", absolute);
 				}
 			}
 
 			@include expect {
 				.foo {
-					position: relative;
+					position: absolute;
 					top: 50%;
 					transform: translateY(-50%)
 				}
 			}
 		}
 	}
+
 }
