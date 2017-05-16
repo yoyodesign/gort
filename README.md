@@ -33,4 +33,4 @@ e.g. `yarn unit -- --grep breakpoint`
 
 ### Documentation
 
-Run `yarn docs` to generate documentation (located at `/doc`).
+Run `yarn docs` to generate documentation (located at `/docs`).
