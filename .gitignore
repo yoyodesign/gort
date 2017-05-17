@@ -1,5 +1,4 @@
-node_modules/
-docs/
-
-/yarn-error.log
-
+node_modules
+docs
+yarn-error.log
+npm-debug.log

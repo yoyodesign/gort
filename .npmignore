@@ -1,0 +1,6 @@
+test
+.editorconfig
+.sassdocrc
+.stylelintrc
+.travis.yml
+yarn.lock
