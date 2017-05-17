@@ -1,0 +1,41 @@
+@include test-module("aspect-ratio") {
+	@include test("aspect-ratio") {
+		@include assert {
+			@include output {
+				@include aspect-ratio;
+			}
+
+			@include expect {
+				position: relative;
+				overflow: hidden;
+
+				&::after {
+					content: "";
+					display: block;
+					height: 0;
+					padding-bottom: 100%;
+				}
+			}
+		}
+	}
+
+	@include test("aspect-ratio(75%)") {
+		@include assert {
+			@include output {
+				@include aspect-ratio(75%);
+			}
+
+			@include expect {
+				position: relative;
+				overflow: hidden;
+
+				&::after {
+					content: "";
+					display: block;
+					height: 0;
+					padding-bottom: 75%;
+				}
+			}
+		}
+	}
+}

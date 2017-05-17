@@ -1,0 +1,17 @@
+////
+/// @author Calvin Davis
+////
+
+@import "property-x-y";
+
+/// Applies margin-right and -left at once.
+/// @param {Value} $value [0]
+@mixin margin-x($value: 0) {
+	@include property-x(margin, $value);
+}
+
+// Applies margin-top and -bottom at once.
+/// @param {Value} $value [0]
+@mixin margin-y($value: 0) {
+	@include property-y(margin, $value);
+}

@@ -1,0 +1,21 @@
+////
+/// @author Calvin Davis
+////
+
+/// Applies clearfix styling.
+/// @link http://cssmojo.com/the-very-latest-clearfix-reloaded/
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+/// Renders clearfix class.
+/// @param {String} $selector [".clearfix"] - Optional selector string
+@mixin clearfix-class($selector: ".clearfix") {
+	#{$selector} {
+		@include clearfix;
+	}
+}

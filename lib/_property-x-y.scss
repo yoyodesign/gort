@@ -1,0 +1,19 @@
+////
+/// @author Calvin Davis
+////
+
+@import "property-multi";
+
+/// Set -right and -left properties at once.
+/// @param {Property} $property - Property name
+/// @param {Value} $value - Value to be assigned to -right and -left
+@mixin property-x($property, $value) {
+	@include property-multi($property, (right, left), $value);
+}
+
+/// Set -top and -bottom properties at once.
+/// @param {Property} $property - Property name
+/// @param {Value} $value - Value to be assigned to -top and -bottom
+@mixin property-y($property, $value) {
+	@include property-multi($property, (top, bottom), $value);
+}

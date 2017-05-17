@@ -1,0 +1,69 @@
+@include test-module("property-x-y") {
+	@include test("property-x(margin, 20px)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include property-x(margin, 20px);
+				}
+			}
+
+			@include expect {
+				.foo {
+					margin-right: 20px;
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+
+	@include test("property-x(border, 10px solid black)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include property-x(border, 10px solid black);
+				}
+			}
+
+			@include expect {
+				.foo {
+					border-right: 10px solid black;
+					border-left: 10px solid black;
+				}
+			}
+		}
+	}
+
+	@include test("property-y(margin, 20px)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include property-y(margin, 20px);
+				}
+			}
+
+			@include expect {
+				.foo {
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	@include test("property-y(border, 10px solid black)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include property-y(border, 10px solid black);
+				}
+			}
+
+			@include expect {
+				.foo {
+					border-top: 10px solid black;
+					border-bottom: 10px solid black;
+				}
+			}
+		}
+	}
+}

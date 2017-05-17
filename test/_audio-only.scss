@@ -1,0 +1,66 @@
+@include test-module("audio-only") {
+	@include test("audio-only") {
+		@include assert {
+			@include output {
+				.foo {
+					@include audio-only;
+				}
+			}
+
+			@include expect {
+				.foo {
+					position: absolute;
+					overflow: hidden;
+					padding: 0;
+					width: 1px;
+					height: 1px;
+					margin: -1px;
+					border: 0;
+					clip: rect(0, 0, 0, 0);
+				}
+			}
+		}
+	}
+
+	@include test("audio-only-class()") {
+		@include assert {
+			@include output {
+				@include audio-only-class;
+			}
+
+			@include expect {
+				.audio-only {
+					position: absolute;
+					overflow: hidden;
+					padding: 0;
+					width: 1px;
+					height: 1px;
+					margin: -1px;
+					border: 0;
+					clip: rect(0, 0, 0, 0);
+				}
+			}
+		}
+	}
+
+	@include test("audio-only-class(\".foo\")") {
+		@include assert {
+			@include output {
+				@include audio-only-class(".foo");
+			}
+
+			@include expect {
+				.foo {
+					position: absolute;
+					overflow: hidden;
+					padding: 0;
+					width: 1px;
+					height: 1px;
+					margin: -1px;
+					border: 0;
+					clip: rect(0, 0, 0, 0);
+				}
+			}
+		}
+	}
+}

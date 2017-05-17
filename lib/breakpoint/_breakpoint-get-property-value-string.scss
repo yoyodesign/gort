@@ -1,0 +1,14 @@
+////
+/// group breakpoint
+/// @author Calvin Davis
+////
+
+/// @access private
+/// @param {List} $list
+/// @returns {String}
+@function _breakpoint-get-property-value-string($list) {
+	$property: nth($list, 1);
+	$value: nth($list, 2);
+
+	@return "(#{$property}: #{$value})";
+}

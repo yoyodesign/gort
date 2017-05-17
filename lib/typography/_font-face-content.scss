@@ -1,0 +1,25 @@
+////
+/// @group typography
+/// @author Calvin Davis
+////
+
+@import "gort-default-font-face-formats";
+
+/// Outputs `@font-face` directive. Splitting of font-face content into own
+/// mixin is necessary because of a True bug.
+/// @access private
+/// @param {String} $family - Font family
+/// @param {String} $path - Path to font files (not including file extensions)
+/// @param {Weight} $weight [null] - Font weight
+/// @param {List} $formats [$gort-default-font-face-formats] - List of formats
+@mixin _font-face-content($family, $path, $weight: null, $formats: $gort-default-font-face-formats) {
+	$src: "";
+
+	@each $extension, $format in $formats {
+		$src: $src + if($src == "", "", ", ") + "url(\"#{$path}.#{$extension}\") format(\"#{$format}\")";
+	}
+
+	font-family: $family;
+	src: unquote($src);
+	font-weight: if($weight != null, $weight, null);
+}

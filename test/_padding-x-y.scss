@@ -1,0 +1,69 @@
+@include test-module("padding-x-y") {
+	@include test("padding-x") {
+		@include assert {
+			@include output {
+				.foo {
+					@include padding-x;
+				}
+			}
+
+			@include expect {
+				.foo {
+					padding-right: 0;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	@include test("padding-x(1em)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include padding-x(1em);
+				}
+			}
+
+			@include expect {
+				.foo {
+					padding-right: 1em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+	@include test("padding-y") {
+		@include assert {
+			@include output {
+				.foo {
+					@include padding-y;
+				}
+			}
+
+			@include expect {
+				.foo {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@include test("padding-y(1em)") {
+		@include assert {
+			@include output {
+				.foo {
+					@include padding-y(1em);
+				}
+			}
+
+			@include expect {
+				.foo {
+					padding-top: 1em;
+					padding-bottom: 1em;
+				}
+			}
+		}
+	}
+}

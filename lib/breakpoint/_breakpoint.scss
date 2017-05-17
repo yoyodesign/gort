@@ -1,0 +1,65 @@
+////
+/// @group breakpoint
+/// @author Calvin Davis
+////
+
+@import "_breakpoint-queries";
+
+/// @param {List} $query
+/// @example scss
+/// 	$mobile: max-width 560px;
+/// 	$tablet: 561px 1024px;
+/// 	$desktop: 1025px;
+///
+/// 	body {
+/// 		@include breakpoint($mobile) {
+/// 			font-size: 14px;
+/// 		}
+///
+/// 		@include breakpoint($tablet) {
+/// 			font-size: 16px;
+/// 		}
+///
+/// 		@include breakpoint($desktop) {
+/// 			font-size: 18px;
+/// 		}
+/// 	}
+@mixin breakpoint($query) {
+	$length: length($query);
+
+	@if (type-of(nth($query, 1)) == list) {
+		@include _breakpoint-queries($query) {
+			@content;
+		}
+	}
+
+	@else if ($length == 1) {
+		$a: nth($query, 1);
+		$type-a: type-of($a);
+
+		@if ($type-a == number) {
+			@include _breakpoint-queries(min-width $a) {
+				@content;
+			}
+		}
+	}
+
+	@else if ($length == 2) {
+		$a: nth($query, 1);
+		$type-a: type-of($a);
+		$b: nth($query, 2);
+		$type-b: type-of($b);
+
+		@if $type-a == number and $type-b == number {
+			@include _breakpoint-queries((min-width $a) (max-width $b)) {
+				@content;
+			}
+		}
+
+		@else if ($type-a == string and $type-b == number) {
+			@include _breakpoint-queries($a $b) {
+				@content;
+			}
+		}
+	}
+}

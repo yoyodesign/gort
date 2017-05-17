@@ -1,0 +1,36 @@
+////
+/// @group breakpoint
+/// @author Calvin Davis
+////
+
+@import "breakpoint-get-property-value-string";
+@import "breakpoint-is-property-value-pair";
+
+/// @param {List} $queries
+/// @access private
+@mixin _breakpoint-queries($queries) {
+	$list: "";
+	$is-first: true;
+	$separator: if(list-separator($queries) == space, " and ", ", ");
+
+	@if (_breakpoint-is-property-value-pair($queries)) {
+		$list: _breakpoint-get-property-value-string($queries);
+	}
+	@else {
+		@each $query in $queries {
+			@if ($is-first) {
+				$is-first: false;
+			}
+
+			@else {
+				$list: $list + $separator;
+			}
+
+			$list: $list + _breakpoint-get-property-value-string($query);
+		}
+	}
+
+	@media #{$list} {
+		@content;
+	}
+}

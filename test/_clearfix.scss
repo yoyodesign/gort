@@ -1,0 +1,51 @@
+@include test-module("clearfix") {
+	@include test("clearfix") {
+		@include assert {
+			@include output {
+				.foo {
+					@include clearfix;
+				}
+			}
+
+			@include expect {
+				.foo:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+			}
+		}
+	}
+
+	@include test("clearfix-class()") {
+		@include assert {
+			@include output {
+				@include clearfix-class;
+			}
+
+			@include expect {
+				.clearfix:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+			}
+		}
+	}
+
+	@include test("clearfix-class(\".foo\")") {
+		@include assert {
+			@include output {
+				@include clearfix-class(".foo");
+			}
+
+			@include expect {
+				.foo:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+			}
+		}
+	}
+}
