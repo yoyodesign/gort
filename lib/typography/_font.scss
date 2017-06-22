@@ -1,0 +1,16 @@
+////
+/// @group typography
+/// @author Tom (Alfie) Gaskill
+////
+
+/// @param {Map} $settings - A map of key value pairs for the properties to set for your font
+@mixin font($settings) {
+	font: {
+		family: map-get($settings, "font-family");
+		size: map-get($settings, "font-size");
+		style: map-get($settings, "font-style");
+		weight: map-get($settings, "font-weight");
+	};
+	letter-spacing: map-get($settings, "letter-spacing");
+	line-height: map-get($settings, "line-height");
+}
