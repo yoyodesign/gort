@@ -1,0 +1,153 @@
+@include test-module("font") {
+	@include test("one-property") {
+		@include assert {
+			@include output {
+				$primary: (
+					font-family: (Arial, sans-serif)
+				);
+
+				@include font($primary);
+			}
+
+			@include expect {
+				font-family: Arial, sans-serif;
+			}
+		}
+	}
+
+	@include test("two-properties") {
+		@include assert {
+			@include output {
+				$primary: (
+					font-family: (Arial, sans-serif),
+					font-size: 18px
+				);
+
+				@include font($primary);
+			}
+
+			@include expect {
+				font-family: Arial, sans-serif;
+				font-size: 18px;
+			}
+		}
+	}
+
+	@include test("three-properties") {
+		@include assert {
+			@include output {
+				$primary: (
+					font-family: (Arial, sans-serif),
+					font-size: 18px,
+					font-style: italic
+				);
+
+				@include font($primary);
+			}
+
+			@include expect {
+				font-family: Arial, sans-serif;
+				font-size: 18px;
+				font-style: italic;
+			}
+		}
+	}
+
+	@include test("four-properties") {
+		@include assert {
+			@include output {
+				$primary: (
+					font-family: (Arial, sans-serif),
+					font-size: 18px,
+					font-style: italic,
+					font-weight: 400
+				);
+
+				@include font($primary);
+			}
+
+			@include expect {
+				font-family: Arial, sans-serif;
+				font-size: 18px;
+				font-style: italic;
+				font-weight: 400;
+			}
+		}
+	}
+
+	@include test("five-properties") {
+		@include assert {
+			@include output {
+				$primary: (
+					font-family: (Arial, sans-serif),
+					font-size: 18px,
+					font-style: italic,
+					font-weight: 400,
+					letter-spacing: 0.05em
+				);
+
+				@include font($primary);
+			}
+
+			@include expect {
+				font-family: Arial, sans-serif;
+				font-size: 18px;
+				font-style: italic;
+				font-weight: 400;
+				letter-spacing: 0.05em;
+			}
+		}
+	}
+
+	@include test("all-properties") {
+		@include assert {
+			@include output {
+				$primary: (
+					font-family: (Arial, sans-serif),
+					font-size: 18px,
+					font-style: italic,
+					font-weight: 400,
+					letter-spacing: 0.05em,
+					line-height: 1.1
+				);
+
+				@include font($primary);
+			}
+
+			@include expect {
+				font-family: Arial, sans-serif;
+				font-size: 18px;
+				font-style: italic;
+				font-weight: 400;
+				letter-spacing: 0.05em;
+				line-height: 1.1;
+			}
+		}
+	}
+
+	@include test("all-properties-mixed-input") {
+		@include assert {
+			@include output {
+				$primary: (
+					letter-spacing: 0.05em,
+					font-weight: 400,
+					font-size: 18px,
+					line-height: 1.1,
+					font-style: italic,
+					font-family: (Arial, sans-serif)
+				);
+
+				@include font($primary);
+			}
+
+			@include expect {
+				font-family: Arial, sans-serif;
+				font-size: 18px;
+				font-style: italic;
+				font-weight: 400;
+				letter-spacing: 0.05em;
+				line-height: 1.1;
+			}
+		}
+	}
+}
