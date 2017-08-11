@@ -9,7 +9,7 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: docs
-  repo: git@github.com:yoyodesign/gort-docs
+  repo: yoyodesign/gort-docs
   target_branch: master
   on:
     branch: feature/travis-docs
