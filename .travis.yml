@@ -11,4 +11,4 @@ deploy:
   repo: git@github.com:yoyodesign/gort-docs
   target_branch: master
   on:
-    branch: master
+    branch: feature/travis-docs
