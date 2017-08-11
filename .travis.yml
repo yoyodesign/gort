@@ -3,3 +3,11 @@ node_js:
   "6.2.0"
 notifications:
   slack: yoyodesign:4HjysiaAvCJPeibgAYAFssht
+after_success: yarn docs
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: docs
+  on:
+    branch: master
