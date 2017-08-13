@@ -74,4 +74,46 @@
 			}
 		}
 	}
+
+	@include test("position(absolute, 0 null)") {
+		@include assert {
+			@include output {
+				@include position(absolute, 0 null);
+			}
+
+			@include expect {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+	@include test("position(absolute, 0 null 100px)") {
+		@include assert {
+			@include output {
+				@include position(absolute, 0 null 100px);
+			}
+
+			@include expect {
+				position: absolute;
+				top: 0;
+				bottom: 100px;
+			}
+		}
+	}
+
+	@include test("position(absolute, 0 null null 0)") {
+		@include assert {
+			@include output {
+				@include position(absolute, 0 null null 0);
+			}
+
+			@include expect {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
 }
