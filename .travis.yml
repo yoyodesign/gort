@@ -12,7 +12,6 @@ ZbKeawJ+pC2RYPtDJcGGj7TdtYaB6m5Y7V7vLe3M16zRMikf8RUYI0oqZ5n5yVsi0zfx4Q2RNg5wh8Z+
 GEoONlY3i04S32/WrPHDaTydHxYH4v5kDfmHJGkw995Ih6kW3t818ASlDszsBUMmbF9ZfQplazY52Bb2G7o8Koj/GMT1+vdu4="
     on:
       branch: master
-      tags: true
   - provider: pages
     skip_cleanup: true
     github_token: "$GITHUB_TOKEN"
