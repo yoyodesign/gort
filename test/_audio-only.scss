@@ -2,22 +2,18 @@
 	@include test("audio-only") {
 		@include assert {
 			@include output {
-				.foo {
-					@include audio-only;
-				}
+				@include audio-only;
 			}
 
 			@include expect {
-				.foo {
-					position: absolute;
-					overflow: hidden;
-					padding: 0;
-					width: 1px;
-					height: 1px;
-					margin: -1px;
-					border: 0;
-					clip: rect(0, 0, 0, 0);
-				}
+				position: absolute;
+				overflow: hidden;
+				padding: 0;
+				width: 1px;
+				height: 1px;
+				margin: -1px;
+				border: 0;
+				clip: rect(0, 0, 0, 0);
 			}
 		}
 	}
@@ -43,14 +39,14 @@
 		}
 	}
 
-	@include test("audio-only-class(\".foo\")") {
+	@include test("audio-only-class(\".text-output\")") {
 		@include assert {
 			@include output {
-				@include audio-only-class(".foo");
+				@include audio-only-class(".text-output");
 			}
 
 			@include expect {
-				.foo {
+				.text-output {
 					position: absolute;
 					overflow: hidden;
 					padding: 0;

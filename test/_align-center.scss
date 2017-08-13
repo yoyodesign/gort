@@ -2,84 +2,68 @@
 	@include test("align-center") {
 		@include assert {
 			@include output {
-				.foo {
-					@include align-center;
-				}
+				@include align-center;
 			}
 
 			@include expect {
-				.foo {
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%,-50%)
-				}
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%)
 			}
 		}
 	}
+
 	@include test("align-center(\"x\")") {
 		@include assert {
 			@include output {
-				.foo {
-					@include align-center("x");
-				}
+				@include align-center("x");
 			}
 
 			@include expect {
-				.foo {
-					left: 50%;
-					transform: translateX(-50%)
-				}
+				left: 50%;
+				transform: translateX(-50%)
 			}
 		}
 	}
+
 	@include test("align-center(\"y\")") {
 		@include assert {
 			@include output {
-				.foo {
-					@include align-center("y");
-				}
+				@include align-center("y");
 			}
 
 			@include expect {
-				.foo {
-					top: 50%;
-					transform: translateY(-50%)
-				}
+				top: 50%;
+				transform: translateY(-50%)
 			}
 		}
 	}
+
 	@include test("align-center($position: absolute)") {
 		@include assert {
 			@include output {
-				.foo {
-					@include align-center($position: absolute);
-				}
+				@include align-center($position: absolute);
 			}
 
 			@include expect {
-				.foo {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%)
-				}
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%)
 			}
 		}
 	}
+
 	@include test("align-center(\"y\", absolute)") {
 		@include assert {
 			@include output {
-				.foo {
-					@include align-center("y", absolute);
-				}
+				@include align-center("y", absolute);
 			}
 
 			@include expect {
-				.foo {
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%)
-				}
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%)
 			}
 		}
 	}

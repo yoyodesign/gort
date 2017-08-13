@@ -2,16 +2,14 @@
 	@include test("breakpoint(400px)") {
 		@include assert {
 			@include output {
-				.foo {
-					@include breakpoint(400px) {
-						color: red;
-					}
+				@include breakpoint(400px) {
+					color: red;
 				}
 			}
 
 			@include expect {
 				@media (min-width: 400px) {
-					.foo {
+					& {
 						color: red;
 					}
 				}
@@ -22,16 +20,14 @@
 	@include test("breakpoint(400px 800px)") {
 		@include assert {
 			@include output {
-				.foo {
-					@include breakpoint(400px 800px) {
-						color: red;
-					}
+				@include breakpoint(400px 800px) {
+					color: red;
 				}
 			}
 
 			@include expect {
 				@media (min-width: 400px) and (max-width: 800px) {
-					.foo {
+					& {
 						color: red;
 					}
 				}
@@ -42,16 +38,14 @@
 	@include test("breakpoint(max-width 1024px)") {
 		@include assert {
 			@include output {
-				.foo {
-					@include breakpoint(max-width 1024px) {
-						color: red;
-					}
+				@include breakpoint(max-width 1024px) {
+					color: red;
 				}
 			}
 
 			@include expect {
 				@media (max-width: 1024px) {
-					.foo {
+					& {
 						color: red;
 					}
 				}
@@ -62,16 +56,14 @@
 	@include test("breakpoint((max-width 1024px) (orientation landscape))") {
 		@include assert {
 			@include output {
-				.foo {
-					@include breakpoint((max-width 1024px) (orientation landscape)) {
-						color: red;
-					}
+				@include breakpoint((max-width 1024px) (orientation landscape)) {
+					color: red;
 				}
 			}
 
 			@include expect {
 				@media (max-width: 1024px) and (orientation: landscape) {
-					.foo {
+					& {
 						color: red;
 					}
 				}
@@ -82,16 +74,14 @@
 	@include test("breakpoint(((max-width 1024px), (orientation landscape)))") {
 		@include assert {
 			@include output {
-				.foo {
-					@include breakpoint(((max-width 1024px), (orientation landscape))) {
-						color: red;
-					}
+				@include breakpoint(((max-width 1024px), (orientation landscape))) {
+					color: red;
 				}
 			}
 
 			@include expect {
 				@media (max-width: 1024px), (orientation: landscape) {
-					.foo {
+					& {
 						color: red;
 					}
 				}
@@ -106,36 +96,34 @@
 				$tablet: 561px 1024px;
 				$desktop: 1025px;
 
-				body {
-					@include breakpoint($mobile) {
-						font-size: 14px;
-					}
+				@include breakpoint($mobile) {
+					font-size: 14px;
+				}
 
-					@include breakpoint($tablet) {
-						font-size: 16px;
-					}
+				@include breakpoint($tablet) {
+					font-size: 16px;
+				}
 
-					@include breakpoint($desktop) {
-						font-size: 18px;
-					}
+				@include breakpoint($desktop) {
+					font-size: 18px;
 				}
 			}
 
 			@include expect {
 				@media (max-width: 560px) {
-					body {
+					& {
 						font-size: 14px;
 					}
 				}
 
 				@media (min-width: 561px) and (max-width: 1024px) {
-					body {
+					& {
 						font-size: 16px;
 					}
 				}
 
 				@media (min-width: 1025px) {
-					body {
+					& {
 						font-size: 18px;
 					}
 				}
