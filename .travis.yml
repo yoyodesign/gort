@@ -6,10 +6,7 @@ after_success: yarn docs
 deploy:
   - provider: npm
     email: "calvin.davis@yoyodesign.com"
-    api_key: "Bbd2OfLHl5tBm8WcEHlCsE1PjgXjFJ7wXyqupUtrZGVBa9BSsis8ArwbGNLjH4msyROzZKDvYsFWDdxu9K1u4V2V62ywPJl5skpgIG9FQKhQXpTN7IYkuzFN03a3u6jNhQifqyYroUX4WpjFEvf1eBFxTdHO46ZCEKUneC6XOS9zVm8KigSGMeiGBBic
-ZbKeawJ+pC2RYPtDJcGGj7TdtYaB6m5Y7V7vLe3M16zRMikf8RUYI0oqZ5n5yVsi0zfx4Q2RNg5wh8Z+i5rdRPiboxm2TlB29fjyPL2QrDjiEGpOBX4WXCWVJzI7Lr41TkAty8GiWjDxBzwCV/yOr8k7veXFqJfmUGRP7u8uH++u+f5Z2cY8fP6PM1HMuoRseR2X5sJ
-6Mak6FvmZrFQxSPxUTgI2oqsoL5sg0enuMWHB5UJ4rYfJ2Q3UvgvwHBnzt6DwEEUTWyzKSe6kKLmoQwIoh2SX4b+M15FQmuuTBKbinEdSioxcD6Psl3EG7ZchFZ1kU4G0KvJPM9+qkc9U0H3I5Z88f9hc1oQgtma/KPVXvZ7+00afV09i8YlesuXzmbeiu4v3bQwxrQ
-GEoONlY3i04S32/WrPHDaTydHxYH4v5kDfmHJGkw995Ih6kW3t818ASlDszsBUMmbF9ZfQplazY52Bb2G7o8Koj/GMT1+vdu4="
+    api_key: "$NPM_AUTH_TOKEN"
     on:
       branch: master
   - provider: pages
