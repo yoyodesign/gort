@@ -1,0 +1,26 @@
+////
+/// @group layout
+/// @author Calvin Davis
+////
+
+@import "../_size";
+@import "_position";
+
+/// Sets position `absolute`, and `top`, `right`, `bottom`, and `left` values.
+/// @param {List&lt;Number&gt;} $values [()]
+@mixin absolute($values: ()) {
+	@include position(absolute, $values);
+}
+
+/// Sets position `absolute`, and `top` and `left` values.
+/// @param {Number} top [0]
+/// @param {Number} left [$top]
+@mixin absolute-top-left($top: 0, $left: $top) {
+	@include absolute($top null null $left);
+}
+
+/// Sets position `absolute`, and `width` and `height` to `100%`.
+@mixin absolute-fill() {
+	@include absolute-top-left;
+	@include size(100%);
+}

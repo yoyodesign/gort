@@ -5,9 +5,9 @@
 
 @import "_to-trbl";
 
-/// Sets `position` and `top`, `right`, `bottom`, and `left` values.
+/// Sets `position`, and `top`, `right`, `bottom`, and `left` values.
 /// @param {Position} $position
-/// @param {List<Number>} $values [()]
+/// @param {List&lt;Number&gt;} $values [()]
 @mixin position($position, $values: ()) {
 	$trbl: to-trbl($values);
 
