@@ -5,6 +5,24 @@
 /// Sets `width` and `height`.
 /// @param {Number} $width [0]
 /// @param {Number} $height [$width]
+/// @example scss Input
+/// 	.square {
+/// 		@include size(1em);
+/// 	}
+///
+/// 	.rectangle {
+/// 		@include size(2em, 1em);
+/// 	}
+/// @example css Output
+/// 	.square {
+/// 		width: 1em;
+/// 		height: 1em;
+/// 	}
+///
+/// 	.rectangle {
+/// 		width: 2em;
+/// 		height: 1em;
+/// 	}
 @mixin size($width: 0, $height: $width) {
 	width: $width;
 	height: $height;
