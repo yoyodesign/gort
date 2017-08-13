@@ -1,6 +1,7 @@
 ////
 /// @group typography
 /// @author Tom (Alfie) Gaskill
+/// @author Calvin Davis
 ////
 
 /// @param {Map} $settings - A map of key value pairs for the properties to set for your font
@@ -13,4 +14,5 @@
 	};
 	letter-spacing: map-get($settings, "letter-spacing");
 	line-height: map-get($settings, "line-height");
+	text-transform: map-get($settings, "text-transform");
 }
