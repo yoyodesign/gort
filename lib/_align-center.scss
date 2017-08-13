@@ -6,9 +6,7 @@
 /// Applies center alignment styles.
 /// @param {String} $axis  ["xy"] - Alignment type. Can be `"xy"`, `"x"` or `"y"`.
 /// @param {Position} $position [null] - Position value. Can be any css position value, e.g. `relative`, `absolute`, `fixed` etc.
-/// @example scss
-///		/*** Input ***/
-///
+/// @example scss Input
 /// 	.feeb {
 /// 		@include align-center;
 /// 	}
@@ -24,51 +22,46 @@
 /// 	.foo-bar {
 /// 		@include align-center($position: absolute);
 /// 	}
-///
-///
-///		/*** Output ***/
-///
+/// @example css Output
 /// 	.feeb {
 /// 		top: 50%;
 ///			left: 50%;
-///			transform: translate(-50%,-50%)
+///			transform: translate(-50%, -50%);
 /// 	}
 ///
 /// 	.foo {
 /// 		left: 50%;
-///			transform: translateX(-50%)
+///			transform: translateX(-50%);
 /// 	}
 ///
 /// 	.bar {
 /// 		position: relative;
 ///			top: 50%;
-///			transform: translateY(-50%)
+///			transform: translateY(-50%);
 /// 	}
 ///
 /// 	.foo-bar {
 /// 		position: absolute;
 ///			top: 50%;
 ///			left: 50%;
-///			transform: translate(-50%, -50%)
+///			transform: translate(-50%, -50%);
 /// 	}
-
 @mixin align-center($axis: "xy", $position: null) {
 	position: $position;
 
-	@if($axis == "xy") {
+	@if ($axis == "xy") {
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%,-50%)
+		transform: translate(-50%, -50%);
 	}
 
-	@if($axis == "x") {
+	@if ($axis == "x") {
 		left: 50%;
-		transform: translateX(-50%)
+		transform: translateX(-50%);
 	}
 
-	@if($axis == "y") {
+	@if ($axis == "y") {
 		top: 50%;
-		transform: translateY(-50%)
+		transform: translateY(-50%);
 	}
 }
-
