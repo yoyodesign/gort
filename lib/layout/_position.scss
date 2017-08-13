@@ -1,0 +1,19 @@
+////
+/// @group layout
+/// @author Calvin Davis
+////
+
+@import "_to-trbl";
+
+/// Sets `position` and `top`, `right`, `bottom`, and `left` values.
+/// @param {Position} $position
+/// @param {List<Number>} $values [()]
+@mixin position($position, $values: ()) {
+	$trbl: to-trbl($values);
+
+	position: $position;
+	top: nth($trbl, 1);
+	right: nth($trbl, 2);
+	bottom: nth($trbl, 3);
+	left: nth($trbl, 4);
+}

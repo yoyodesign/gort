@@ -2,15 +2,11 @@
 	@include test("property-multi(margin, (), 20px)") {
 		@include assert {
 			@include output {
-				.foo {
-					@include property-multi(margin, (), 20px);
-				}
+				@include property-multi(margin, (), 20px);
 			}
 
 			@include expect {
-				.foo {
-					// No output.
-				}
+				// Nothing.
 			}
 		}
 	}
@@ -18,15 +14,11 @@
 	@include test("property-multi(font, (family), sans-serif") {
 		@include assert {
 			@include output {
-				.foo {
-					@include property-multi(font, (family), sans-serif);
-				}
+				@include property-multi(font, (family), sans-serif);
 			}
 
 			@include expect {
-				.foo {
-					font-family: sans-serif;
-				}
+				font-family: sans-serif;
 			}
 		}
 	}
@@ -34,16 +26,12 @@
 	@include test("property-multi(border, (top, right), 2px solid red)") {
 		@include assert {
 			@include output {
-				.foo {
-					@include property-multi(border, (top, right), 2px solid red);
-				}
+				@include property-multi(border, (top, right), 2px solid red);
 			}
 
 			@include expect {
-				.foo {
-					border-top: 2px solid red;
-					border-right: 2px solid red;
-				}
+				border-top: 2px solid red;
+				border-right: 2px solid red;
 			}
 		}
 	}

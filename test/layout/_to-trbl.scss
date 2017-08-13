@@ -1,0 +1,25 @@
+@include test-module("to-trbl") {
+	@include test("to-trbl(()") {
+		@include assert-equal(to-trbl(()), (null null null null));
+	}
+
+	@include test("to-trbl(100px)") {
+		@include assert-equal(to-trbl(100px), (100px 100px 100px 100px));
+	}
+
+	@include test("to-trbl(100px null)") {
+		@include assert-equal(to-trbl(100px null), (100px null 100px null));
+	}
+
+	@include test("to-trbl(100px null 50px)") {
+		@include assert-equal(to-trbl(100px null 50px), (100px null 50px null));
+	}
+
+	@include test("to-trbl(100px null 50px 1em)") {
+		@include assert-equal(to-trbl(100px null 50px 1em), (100px null 50px 1em));
+	}
+
+	@include test("to-trbl(100px null 50px 1em 50%)") {
+		@include assert-equal(to-trbl(100px null 50px 1em 50%), (100px null 50px 1em));
+	}
+}

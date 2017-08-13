@@ -6,7 +6,7 @@
 @import "_breakpoint-queries";
 
 /// @param {List} $query
-/// @example scss
+/// @example scss Input
 /// 	$mobile: max-width 560px;
 /// 	$tablet: 561px 1024px;
 /// 	$desktop: 1025px;
@@ -21,6 +21,24 @@
 /// 		}
 ///
 /// 		@include breakpoint($desktop) {
+/// 			font-size: 18px;
+/// 		}
+/// 	}
+/// @example css Output
+/// 	@media (max-width: 560px) {
+/// 		body {
+/// 			font-size: 14px;
+/// 		}
+/// 	}
+///
+/// 	@media (min-width: 561px) and (max-width: 1024px) {
+/// 		body {
+/// 			font-size: 16px;
+/// 		}
+/// 	}
+///
+/// 	@media (min-width: 1025px) {
+/// 		body {
 /// 			font-size: 18px;
 /// 		}
 /// 	}

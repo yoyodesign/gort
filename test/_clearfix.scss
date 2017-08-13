@@ -2,13 +2,11 @@
 	@include test("clearfix") {
 		@include assert {
 			@include output {
-				.foo {
-					@include clearfix;
-				}
+				@include clearfix;
 			}
 
 			@include expect {
-				.foo:after {
+				&:after {
 					content: "";
 					display: block;
 					clear: both;
@@ -33,14 +31,14 @@
 		}
 	}
 
-	@include test("clearfix-class(\".foo\")") {
+	@include test("clearfix-class(\".test-output\")") {
 		@include assert {
 			@include output {
-				@include clearfix-class(".foo");
+				@include clearfix-class(".test-output");
 			}
 
 			@include expect {
-				.foo:after {
+				.test-output:after {
 					content: "";
 					display: block;
 					clear: both;

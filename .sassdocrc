@@ -5,6 +5,7 @@
 	},
 	"groups": {
 		"breakpoint": "Breakpoint",
+		"layout": "Layout",
 		"typography": "Typography"
 	}
 }
