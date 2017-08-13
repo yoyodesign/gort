@@ -11,7 +11,7 @@
 		size: map-get($settings, "font-size");
 		style: map-get($settings, "font-style");
 		weight: map-get($settings, "font-weight");
-	};
+	}
 	letter-spacing: map-get($settings, "letter-spacing");
 	line-height: map-get($settings, "line-height");
 	text-transform: map-get($settings, "text-transform");
