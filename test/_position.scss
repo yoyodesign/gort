@@ -1,0 +1,77 @@
+@include test-module("position") {
+	@include test("position(absolute)") {
+		@include assert {
+			@include output {
+				@include position(absolute);
+			}
+
+			@include expect {
+				position: absolute;
+			}
+		}
+	}
+
+	@include test("position(absolute, 0)") {
+		@include assert {
+			@include output {
+				@include position(absolute, 0);
+			}
+
+			@include expect {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+
+	@include test("position(absolute, 0 100px)") {
+		@include assert {
+			@include output {
+				@include position(absolute, 0 100px);
+			}
+
+			@include expect {
+				position: absolute;
+				top: 0;
+				right: 100px;
+				bottom: 0;
+				left: 100px;
+			}
+		}
+	}
+
+	@include test("position(absolute, 0 100px 50px)") {
+		@include assert {
+			@include output {
+				@include position(absolute, 0 100px 50px);
+			}
+
+			@include expect {
+				position: absolute;
+				top: 0;
+				right: 100px;
+				bottom: 50px;
+				left: 100px;
+			}
+		}
+	}
+
+	@include test("position(absolute, 0 100px 50px 200px)") {
+		@include assert {
+			@include output {
+				@include position(absolute, 0 100px 50px 200px);
+			}
+
+			@include expect {
+				position: absolute;
+				top: 0;
+				right: 100px;
+				bottom: 50px;
+				left: 200px;
+			}
+		}
+	}
+}

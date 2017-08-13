@@ -1,0 +1,48 @@
+////
+/// @group layout
+/// @author Calvin Davis
+////
+
+/// Sets `position` and `top`, `right`, `bottom`, and `left` values.
+/// @param {Position} $position
+/// @param {List<Number>} $values [()]
+@mixin position($position, $values: ()) {
+	position: $position;
+
+	@if (length($values) == 1) {
+		$value: nth($values, 1);
+
+		top: $value;
+		right: $value;
+		bottom: $value;
+		left: $value;
+	}
+
+	@if (length($values) == 2) {
+		$y: nth($values, 1);
+		$x: nth($values, 2);
+
+		top: $y;
+		right: $x;
+		bottom: $y;
+		left: $x;
+	}
+
+	@if (length($values) == 3) {
+		$top: nth($values, 1);
+		$x: nth($values, 2);
+		$bottom: nth($values, 3);
+
+		top: $top;
+		right: $x;
+		bottom: $bottom;
+		left: $x;
+	}
+
+	@if (length($values) == 4) {
+		top: nth($values, 1);
+		right: nth($values, 2);
+		bottom: nth($values, 3);
+		left: nth($values, 4);
+	}
+}
