@@ -4,8 +4,8 @@
 ////
 
 /// Returns list of sizes in TRBL (top, right, bottom, left) format.
-/// @param {List<Number} $values
-/// @returns {List<Number>}
+/// @param {Number[]} $values
+/// @returns {Number[]}
 @function to-trbl($values) {
 	@if (length($values) == 0) {
 		@return null null null null;
