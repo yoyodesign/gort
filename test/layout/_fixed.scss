@@ -1,0 +1,119 @@
+@include test-module("fixed") {
+	@include test("fixed()") {
+		@include assert {
+			@include output {
+				@include fixed;
+			}
+
+			@include expect {
+				position: fixed;
+			}
+		}
+	}
+
+	@include test("fixed(0)") {
+		@include assert {
+			@include output {
+				@include fixed(0);
+			}
+
+			@include expect {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+
+	@include test("fixed(0 null)") {
+		@include assert {
+			@include output {
+				@include fixed(0 null);
+			}
+
+			@include expect {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+			}
+		}
+	}
+
+	@include test("fixed(0 100px)") {
+		@include assert {
+			@include output {
+				@include fixed(0 100px);
+			}
+
+			@include expect {
+				position: fixed;
+				top: 0;
+				right: 100px;
+				bottom: 0;
+				left: 100px;
+			}
+		}
+	}
+
+	@include test("fixed(0 null 100%)") {
+		@include assert {
+			@include output {
+				@include fixed(0 null 100%);
+			}
+
+			@include expect {
+				position: fixed;
+				top: 0;
+				bottom: 100%;
+			}
+		}
+	}
+
+	@include test("fixed(0 100px 100%)") {
+		@include assert {
+			@include output {
+				@include fixed(0 100px 100%);
+			}
+
+			@include expect {
+				position: fixed;
+				top: 0;
+				right: 100px;
+				bottom: 100%;
+				left: 100px;
+			}
+		}
+	}
+
+	@include test("fixed(0 null null 0)") {
+		@include assert {
+			@include output {
+				@include fixed(0 null null 0);
+			}
+
+			@include expect {
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+
+	@include test("fixed(0 100px 100% 1em)") {
+		@include assert {
+			@include output {
+				@include fixed(0 100px 100% 1em);
+			}
+
+			@include expect {
+				position: fixed;
+				top: 0;
+				right: 100px;
+				bottom: 100%;
+				left: 1em;
+			}
+		}
+	}
+}

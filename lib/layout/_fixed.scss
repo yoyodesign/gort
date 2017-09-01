@@ -1,0 +1,26 @@
+////
+/// @group layout
+/// @author Calvin Davis
+////
+
+@import "../_size";
+@import "_position";
+
+/// Sets position `fixed`, and `top`, `right`, `bottom`, and `left` values.
+/// @param {List&lt;Number&gt;} $values [()]
+@mixin fixed($values: ()) {
+	@include position(fixed, $values);
+}
+
+/// Sets position `fixed`, and `top` and `left` values.
+/// @param {Number} top [0]
+/// @param {Number} left [$top]
+@mixin fixed-top-left($top: 0, $left: $top) {
+	@include fixed($top null null $left);
+}
+
+/// Sets position `fixed`, and `width` and `height` to `100%`.
+@mixin fixed-fill() {
+	@include fixed-top-left;
+	@include size(100%);
+}
