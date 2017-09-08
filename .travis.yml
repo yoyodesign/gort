@@ -2,7 +2,7 @@ language: node_js
 node_js: 6.2.0
 notifications:
   slack: yoyodesign:4HjysiaAvCJPeibgAYAFssht
-after_success: yarn docs
+after_success: npm run docs
 deploy:
   - provider: npm
     email: "calvin.davis@yoyodesign.com"

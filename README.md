@@ -9,29 +9,29 @@ Gort not included.
 
 ### Dependencies
 
-* Node 6.2.0
-* Yarn 0.21.3
+* Node 6.11.2
+* NPM 5.3.0
 
 ### Installation
 
-1. Run `yarn` to install.
+1. Run `npm install` to install.
 
 ### Running tests
 
-Run `yarn test` to run the linter followed by the unit tests.
+Run `npm test` to run the linter followed by the unit tests.
 
 #### Linter
 
-Run `yarn lint` to run the linter.
+Run `npm run lint` to run the linter.
 
 #### Unit tests
 
-Run `yarn unit` to run unit tests.
+Run `npm run unit` to run unit tests.
 
-It is also possible to run specific unit tests by running `yarn unit -- --grep {string}` (where `{string}` matches the description of test or assertion you want to run).
+It is also possible to run specific unit tests by running `npm run unit -- --grep {string}` (where `{string}` matches the description of test or assertion you want to run).
 
-e.g. `yarn unit -- --grep breakpoint`
+e.g. `npm unit -- --grep breakpoint`
 
 ### Documentation
 
-Run `yarn docs` to generate documentation (located at `/docs`).
+Run `npm run docs` to generate documentation (located at `/docs`).
