@@ -3,4 +3,3 @@ test
 .sassdocrc
 .stylelintrc
 .travis.yml
-yarn.lock

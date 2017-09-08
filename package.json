@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "stylelint lib/**/*.scss test/**/*.scss",
     "unit": "mocha",
-    "test": "yarn lint && yarn unit",
+    "test": "npm run lint && npm run unit",
     "docs": "sassdoc lib"
   }
 }
