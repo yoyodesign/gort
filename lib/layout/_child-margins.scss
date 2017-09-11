@@ -1,0 +1,33 @@
+////
+/// @group layout
+/// @author Calvin Davis
+////
+
+/// Sets `margin-left` and `margin-right` of first and last child respectively.
+/// @param {Number} $margin [0]
+@mixin child-margins-x($margin: 0)
+{
+	> * {
+		&:first-child {
+			margin-left: $margin;
+		}
+
+		&:last-child {
+			margin-right: $margin;
+		}
+	}
+}
+
+/// Sets `margin-top` and `margin-bottom` of first and last child respectively.
+/// @param {Number} $margin [0]
+@mixin child-margins-y($margin: 0) {
+	> * {
+		&:first-child {
+			margin-top: $margin;
+		}
+
+		&:last-child {
+			margin-bottom: $margin;
+		}
+	}
+}

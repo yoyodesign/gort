@@ -1,0 +1,73 @@
+@include test-module("child-margins") {
+	@include test("child-margins-x()") {
+		@include assert {
+			@include output {
+				@include child-margins-x();
+			}
+
+			@include expect {
+				> *:first-child {
+					margin-left: 0;
+				}
+
+				> *:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	@include test("child-margins-x(50px)") {
+		@include assert {
+			@include output {
+				@include child-margins-x(50px);
+			}
+
+			@include expect {
+				> *:first-child {
+					margin-left: 50px;
+				}
+
+				> *:last-child {
+					margin-right: 50px;
+				}
+			}
+		}
+	}
+
+	@include test("child-margins-y()") {
+		@include assert {
+			@include output {
+				@include child-margins-y();
+			}
+
+			@include expect {
+				> *:first-child {
+					margin-top: 0;
+				}
+
+				> *:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@include test("child-margins-y(50px)") {
+		@include assert {
+			@include output {
+				@include child-margins-y(50px);
+			}
+
+			@include expect {
+				> *:first-child {
+					margin-top: 50px;
+				}
+
+				> *:last-child {
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}
+}
