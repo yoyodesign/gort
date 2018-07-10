@@ -12,7 +12,7 @@
 /// 		text-transform: uppercase
 /// 	)
 ///
-/// 	$font-h2: array-merge($font-h1, (
+/// 	$font-h2: map-merge($font-h1, (
 /// 		font-size: 1.5em,
 /// 		font-style: italic
 /// 	))
