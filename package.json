@@ -7,7 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "^5.2.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.2",
     "sass-true": "^4.0.0",
     "sassdoc": "^2.5.0",
     "stylelint": "^9.2.1",
