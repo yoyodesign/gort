@@ -5,8 +5,7 @@
 
 /// Sets `margin-left` and `margin-right` of first and last child respectively.
 /// @param {Number} $margin [0]
-@mixin child-margins-x($margin: 0)
-{
+@mixin child-margins-x($margin: 0) {
 	> * {
 		&:first-child {
 			margin-left: $margin;
