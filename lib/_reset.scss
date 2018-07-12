@@ -1,0 +1,189 @@
+////
+/// @author Calvin Davis
+/// @author Tom (Alfie) Gaskill
+/// @author Mike Masey
+////
+
+/// Outputs frequently used reset rules.
+@mixin reset() {
+	html,
+	:root {
+		box-sizing: border-box;
+	}
+
+	html {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		min-height: 100%;
+	}
+
+	body {
+		margin: 0;
+		min-height: 100%;
+	}
+
+	* {
+		&,
+		&:before,
+		&:after {
+			box-sizing: inherit;
+		}
+	}
+
+	html,
+	body,
+	img,
+	abbr,
+	acronym {
+		border: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 100%;
+		font-weight: normal;
+	}
+
+	h1:first-child,
+	h2:first-child,
+	h3:first-child,
+	h4:first-child,
+	h5:first-child,
+	h6:first-child,
+	p:first-child {
+		margin-top: 0;
+	}
+
+	h1:last-child,
+	h2:last-child,
+	h3:last-child,
+	h4:last-child,
+	h5:last-child,
+	h6:last-child,
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	th,
+	code,
+	cite,
+	caption {
+		font-weight: normal;
+		font-style: normal;
+		text-align: left;
+	}
+
+	address {
+		font-style: normal;
+	}
+
+	textarea {
+		resize: vertical;
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+	}
+
+	fieldset {
+		// Changes fieldsets to remove min-content min-width.
+		margin: 0;
+		padding: 0;
+		min-width: auto;
+		border: none;
+	}
+
+	input {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+
+		&:focus,
+		&[type="search"]:focus {
+			outline-offset: -2px;
+		}
+
+		&[type="search"] {
+			appearance: none;
+			box-sizing: border-box;
+
+			&::-webkit-clear-button {
+				display: none;
+			}
+		}
+
+		&[type="number"] {
+			-moz-appearance: textfield !important;
+
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				display: none;
+			}
+		}
+	}
+
+	select {
+		cursor: pointer;
+		appearance: none;
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
+	img,
+	video {
+		max-width: 100%;
+	}
+
+	img {
+		object-fit: cover;
+		font-family: "object-fit: cover;";
+	}
+
+	figure,
+	blockquote {
+		margin: 0;
+	}
+
+	summary {
+		// Removes the arrow from the <summary> element.
+		display: block;
+	}
+
+	button {
+		font-size: inherit;
+	}
+
+	a {
+		color: currentColor;
+		text-decoration: none;
+	}
+
+	ul,
+	ol {
+		margin: 0;
+		padding: 0;
+	}
+
+	svg,
+	symbol {
+		fill: currentColor;
+	}
+
+	template {
+		display: none;
+	}
+
+	canvas {
+		display: block;
+		outline: none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+	}
+}
