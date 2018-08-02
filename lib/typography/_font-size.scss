@@ -1,0 +1,25 @@
+////
+/// @group Typography
+/// @author Alvaro Mayo
+////
+
+
+/// Sets font size and line height
+///
+/// @param {Number} $font-size - Font size
+/// @param {Number} $line-height [null] - Line height
+/// @link https://www.w3schools.com/cssref/pr_font_font-size.asp
+
+@mixin font-size($font-size, $line-height: null) {
+	font-size: $font-size;
+
+	@if $line-height != null {
+		@if unit($font-size) == unit($line-height) {
+			line-height: ($line-height / $font-size);
+		}
+
+		@else {
+			line-height: $line-height;
+		}
+	}
+}
