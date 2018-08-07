@@ -69,10 +69,10 @@
 /// 		line-height: 1.5;
 /// 	}
 
-@mixin font-size($font-size, $line-height: null) {
+@mixin font-size($font-size: null, $line-height: null) {
 	font-size: $font-size;
 
-	@if $line-height != null {
+	@if $line-height != null and $font-size != null {
 		@if unit($font-size) == unit($line-height) {
 			line-height: ($line-height / $font-size);
 		}
