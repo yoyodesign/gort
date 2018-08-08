@@ -214,4 +214,106 @@
 			}
 		}
 	}
+
+	@include test("arrow(top-left)") {
+		@include assert {
+			@include output {
+				@include arrow("top-left");
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-right-width: 10px;
+				border-top-width: 10px;
+				border-top-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(top-right)") {
+		@include assert {
+			@include output {
+				@include arrow("top-right");
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-left-width: 10px;
+				border-top-width: 10px;
+				border-top-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(bottom-left)") {
+		@include assert {
+			@include output {
+				@include arrow("bottom-left");
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-right-width: 10px;
+				border-bottom-width: 10px;
+				border-bottom-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(bottom-right)") {
+		@include assert {
+			@include output {
+				@include arrow("bottom-right");
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-left-width: 10px;
+				border-bottom-width: 10px;
+				border-bottom-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(top-right, $height: 20px)") {
+		@include assert {
+			@include output {
+				@include arrow("top-right", $height: 20px);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-left-width: 10px;
+				border-top-width: 10px;
+				border-top-color: currentColor;
+			}
+		}
+	}
+
+	@include test("arrow(bottom-left, color: red;)") {
+		@include assert {
+			@include output {
+				@include arrow("bottom-left", $color: red);
+			}
+
+			@include expect {
+				width: 0;
+				height: 0;
+				border: 0 solid transparent;
+				border-right-width: 10px;
+				border-bottom-width: 10px;
+				border-bottom-color: red;
+			}
+		}
+	}
 }
