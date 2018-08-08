@@ -3,10 +3,11 @@
 /// @author Alvaro Mayo
 ////
 
+@import "gort-default-font-size";
 
 /// Sets font size and line height
 ///
-/// @param {Number} $font-size - Font size
+/// @param {Number} $font-size [$gort-default-font-size] - Font size
 /// @param {Number} $line-height [null] - Line height
 /// @link https://www.w3schools.com/cssref/pr_font_font-size.asp
 ///
@@ -14,8 +15,9 @@
 /// 	.foo {
 /// 		@include font-size(16px);
 /// 	}
+///
 /// 	.bar {
-/// 	@include font-size(16px, 20px);
+/// 		@include font-size(16px, 20px);
 /// 	}
 ///
 /// 	.bar {
@@ -29,20 +31,6 @@
 /// 	.que {
 /// 		@include font-size(18px, 1.5);
 /// 	}
-///
-///
-///
-/// 	@mixin font-size($font-size, $line-height: null) {
-/// 		font-size: $font-size;
-///
-/// 		@if $line-height != null {
-/// 			@if unit($font-size) == unit($line-height) {
-/// 				line-height: ($line-height / $font-size);
-/// 		} @else {
-/// 			line-height: $line-height;
-/// 		}
-/// 	}
-/// }
 ///
 /// @example css Output
 /// 	.foo {
@@ -69,7 +57,7 @@
 /// 		line-height: 1.5;
 /// 	}
 
-@mixin font-size($font-size: null, $line-height: null) {
+@mixin font-size($font-size: $gort-default-font-size, $line-height: null) {
 	font-size: $font-size;
 
 	@if $line-height != null and $font-size != null {
