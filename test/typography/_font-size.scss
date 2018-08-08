@@ -1,0 +1,62 @@
+@include test-module("font-size") {
+	@include test("font-size(10px)") {
+		@include assert {
+			@include output {
+				@include font-size(10px);
+			}
+
+			@include expect {
+				font-size: 10px;
+			}
+		}
+	}
+	@include test("font-size: 10px, line-height:10px") {
+		@include assert {
+			@include output {
+				@include font-size(10px,10px);
+			}
+
+			@include expect {
+				font-size: 10px;
+				line-height: 1;
+			}
+		}
+	}
+	@include test("font-size: 10px, line-height:1em") {
+		@include assert {
+			@include output {
+				@include font-size(10px,1em);
+			}
+
+			@include expect {
+				font-size: 10px;
+				line-height: 1em;
+			}
+		}
+	}
+
+	@include test(" ") {
+		@include assert {
+			@include output {
+				@include font-size("");
+			}
+
+			@include expect {
+				font-size: null;
+				line-height: null;
+			}
+		}
+	}
+	@include test("font-size: null, line-height:20px") {
+		@include assert {
+			@include output {
+				@include font-size($line-height: 20px);
+			}
+
+			@include expect {
+				font-size: null;
+				line-height: 20px;
+			}
+		}
+	}
+}

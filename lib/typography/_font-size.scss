@@ -1,0 +1,72 @@
+////
+/// @group Typography
+/// @author Alvaro Mayo
+////
+
+@import "gort-default-font-size";
+
+/// Sets font size and line height
+///
+/// @param {Number} $font-size [$gort-default-font-size] - Font size
+/// @param {Number} $line-height [null] - Line height
+/// @link https://www.w3schools.com/cssref/pr_font_font-size.asp
+///
+/// @example scss Input
+/// 	.foo {
+/// 		@include font-size(16px);
+/// 	}
+///
+/// 	.bar {
+/// 		@include font-size(16px, 20px);
+/// 	}
+///
+/// 	.bar {
+/// 		@include font-size(50%, 80%);
+/// 	}
+///
+/// 	.quu {
+/// 		@include font-size(2em, 30px);
+/// 	}
+///
+/// 	.que {
+/// 		@include font-size(18px, 1.5);
+/// 	}
+///
+/// @example css Output
+/// 	.foo {
+/// 		font-size: 16px;
+/// 	}
+///
+/// 	.bar {
+/// 		font-size: 16px;
+/// 		line-height: 1.25;
+/// 	}
+///
+/// 	.bar {
+/// 		font-size: 50%;
+/// 		line-height: 1.6;
+/// 	}
+///
+/// 	.quu {
+/// 		font-size: 2em;
+/// 		line-height: 30px;
+/// 	}
+///
+/// 	.que {
+/// 		font-size: 18px;
+/// 		line-height: 1.5;
+/// 	}
+
+@mixin font-size($font-size: $gort-default-font-size, $line-height: null) {
+	font-size: $font-size;
+
+	@if $line-height != null and $font-size != null {
+		@if unit($font-size) == unit($line-height) {
+			line-height: ($line-height / $font-size);
+		}
+
+		@else {
+			line-height: $line-height;
+		}
+	}
+}
