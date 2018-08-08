@@ -1,11 +1,12 @@
 ////
 /// @author Calvin Davis
+/// @author Alvaro Mayo
 ////
 
 @import "size";
 
 /// Creates a CSS arrow.
-/// @param {String} $direction  ["right"] - Arrow direction. Can be `"up"`, `"right"`, `"down"`, or `"left"`
+/// @param {String} $direction  ["right"] - Arrow direction. Can be `"up"`, `"right"`, `"down"`, `"left"`, `"top-right"`, `"top-left"`, `"bottom-right"` or `"bottom-left"`
 /// @param {Number} $width [10px] - Base length of arrow
 /// @param {Number} $height [$width] - Height of arrow
 /// @param {Color} $color [currentColor] - Color of arrow
@@ -34,10 +35,39 @@
 		$right: top;
 	}
 
+	@if ($direction == "top-left") {
+		$base: top;
+		$left: right;
+	}
+
+	@if ($direction == "top-right") {
+		$base: top;
+		$left: left;
+	}
+
+	@if ($direction == "bottom-left") {
+		$base: bottom;
+		$left: right;
+	}
+
+	@if ($direction == "bottom-right") {
+		$base: bottom;
+		$left: left;
+	}
+
 	@include size;
-	border: 0 solid transparent;
-	border-#{$left}-width: $half-width;
-	border-#{$right}-width: $half-width;
-	border-#{$base}-width: $height;
-	border-#{$base}-color: $color;
+	@if ($direction == "up" or $direction == "right" or $direction == "down" or $direction == "left") {
+		border: 0 solid transparent;
+		border-#{$left}-width: $half-width;
+		border-#{$right}-width: $half-width;
+		border-#{$base}-width: $height;
+		border-#{$base}-color: $color;
+	}
+
+	@if ($direction == "top-right" or $direction == "bottom-right" or $direction == "bottom-left" or $direction == "top-left") {
+		border: 0 solid transparent;
+		border-#{$left}-width: $width;
+		border-#{$base}-width: $width;
+		border-#{$base}-color: $color;
+	}
 }
