@@ -3,4 +3,4 @@ var sassTrue = require("sass-true");
 
 var file = path.join(__dirname, "_test.scss");
 
-sassTrue.runSass({ file }, describe, it);
+sassTrue.runSass({ file }, { describe, it });
