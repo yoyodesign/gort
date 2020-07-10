@@ -1,6 +1,6 @@
 {
   "name": "yoyo-gort",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "main": "index.js",
   "repository": "git@github.com:yoyodesign/gort",
   "author": "Calvin Davis <calvin.davis@yoyodesign.com>",
