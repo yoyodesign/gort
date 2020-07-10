@@ -34,7 +34,7 @@ Run `npm run unit` to run unit tests.
 
 It is also possible to run specific unit tests by running `npm run unit -- --grep {string}` (where `{string}` matches the description of test or assertion you want to run).
 
-e.g. `npm unit -- --grep breakpoint`
+e.g. `npm run unit -- --grep breakpoint`
 
 ### Documentation
 
