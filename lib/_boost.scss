@@ -1,0 +1,35 @@
+////
+/// @author Calvin Davis
+////
+
+/// Multiplies the specificity of a selector.
+/// @param {Number} $count [1] The number of times to increase the specificity of the selector.
+/// @example scss Input
+/// 	.foo {
+/// 		@include boost() {
+/// 			color: red;
+/// 		}
+///
+/// 		@include boost(2) {
+/// 			color: green;
+/// 		}
+/// 	}
+/// @example css Output
+/// 	.foo.foo {
+/// 		color: red;
+/// 	}
+///
+/// 	.foo.foo.foo {
+/// 		color: green;
+/// 	}
+@mixin boost($count: 1) {
+	$selector: "";
+
+	@for $i from 1 through $count {
+		$selector: $selector + &;
+	}
+
+	&#{$selector} {
+		@content;
+	}
+}

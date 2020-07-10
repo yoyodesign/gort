@@ -1,0 +1,49 @@
+@include test-module("boost") {
+	@include test("boost") {
+		@include assert {
+			@include output {
+				@include boost {
+					color: red;
+				}
+			}
+
+			@include expect {
+				@at-root .test-output.test-output {
+					color: red;
+				}
+			}
+		}
+	}
+
+	@include test("boost(1)") {
+		@include assert {
+			@include output {
+				@include boost(1) {
+					color: red;
+				}
+			}
+
+			@include expect {
+				@at-root .test-output.test-output {
+					color: red;
+				}
+			}
+		}
+	}
+
+	@include test("boost(2)") {
+		@include assert {
+			@include output {
+				@include boost(2) {
+					color: red;
+				}
+			}
+
+			@include expect {
+				@at-root .test-output.test-output.test-output {
+					color: red;
+				}
+			}
+		}
+	}
+}
