@@ -6,7 +6,6 @@
   "author": "Calvin Davis <calvin.davis@yoyodesign.com>",
   "license": "MIT",
   "devDependencies": {
-    "marked": "^1.1.0",
     "mocha": "^8.0.1",
     "node-sass": "^4.14.1",
     "sass-true": "^5.0.0",
