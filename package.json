@@ -7,11 +7,11 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "^5.2.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.14.1",
     "sass-true": "^4.0.0",
-    "sassdoc": "^2.5.0",
+    "sassdoc": "^2.7.2",
     "stylelint": "^9.2.1",
-    "stylelint-scss": "^3.1.0"
+    "stylelint-scss": "^3.18.0"
   },
   "scripts": {
     "lint": "stylelint lib/**/*.scss test/**/*.scss",
