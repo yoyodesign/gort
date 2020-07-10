@@ -13,8 +13,8 @@ Gort not included.
 
 ### Dependencies
 
-* Node 8.11.2
-* NPM 6.1.0
+* Node >=14.5.0
+* NPM >=6.14.5
 
 ### Installation
 

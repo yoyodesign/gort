@@ -6,17 +6,20 @@
   "author": "Calvin Davis <calvin.davis@yoyodesign.com>",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "node-sass": "^4.9.2",
-    "sass-true": "^4.0.0",
-    "sassdoc": "^2.5.0",
-    "stylelint": "^9.2.1",
-    "stylelint-scss": "^3.1.0"
+    "mocha": "^8.0.1",
+    "node-sass": "^4.14.1",
+    "sass-true": "^5.0.0",
+    "sassdoc": "^2.7.2",
+    "stylelint": "^13.6.1",
+    "stylelint-scss": "^3.18.0"
   },
   "scripts": {
     "lint": "stylelint lib/**/*.scss test/**/*.scss",
     "unit": "mocha",
     "test": "npm run lint && npm run unit",
     "docs": "sassdoc lib"
+  },
+  "engines": {
+    "node": ">=14.5.0"
   }
 }
