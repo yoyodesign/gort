@@ -18,5 +18,8 @@
     "unit": "mocha",
     "test": "npm run lint && npm run unit",
     "docs": "sassdoc lib"
+  },
+  "engines": {
+    "node": ">=14.5.0"
   }
 }
