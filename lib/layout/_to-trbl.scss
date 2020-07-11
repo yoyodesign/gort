@@ -7,17 +7,12 @@
 /// @param {Number[]} $values
 /// @returns {Number[]}
 /// @example scss
-/// 	to-trbl(1em)
-/// 	// (1em 1em 1em 1em)
-///
-/// 	to-trbl(1em 0)
-/// 	// (1em 0 1em 0)
-///
-/// 	to-trbl(1em 0 100px)
-/// 	// (1em 0 100px 0)
-///
-/// 	to-trbl(1em 0 100px 50%)
-/// 	// (1em 0 100px 50%)
+/// 	.foo {
+/// 		border-width: to-trbl(1em);
+/// 		margin: to-trbl(1em 0);
+/// 		padding: to-trbl(1em 0 100px);
+/// 		outline-width: to-trbl(1em 0 100px 50%);
+/// 	}
 @function to-trbl($values) {
 	@if (length($values) == 0) {
 		@return null null null null;

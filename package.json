@@ -17,9 +17,12 @@
     "lint": "stylelint lib/**/*.scss test/**/*.scss",
     "unit": "mocha",
     "test": "npm run lint && npm run unit",
-    "docs": "sassdoc lib"
+    "docs": "sassdoc lib --theme herman"
   },
   "engines": {
     "node": ">=14.5.0"
+  },
+  "dependencies": {
+    "sassdoc-theme-herman": "^3.2.0"
   }
 }

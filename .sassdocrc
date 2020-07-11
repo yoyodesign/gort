@@ -6,6 +6,18 @@
 	"groups": {
 		"breakpoint": "Breakpoint",
 		"layout": "Layout",
-		"typography": "Typography"
+		"typography": "Typography",
+		undefined: "General"
+	},
+	theme: "herman",
+	herman: {
+		sass: {
+			includepaths: [
+				"lib"
+			],
+			includes: [
+				"gort"
+			]
+		}
 	}
 }

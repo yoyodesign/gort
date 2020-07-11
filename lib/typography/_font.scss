@@ -5,7 +5,7 @@
 ////
 
 /// @param {Map} $settings - A map of key value pairs for the properties to set for your font
-/// @example scss Input
+/// @example scss
 /// 	$font-h1: (
 /// 		font-family: (Arial, sans-serif),
 /// 		font-size: 2em,
@@ -23,19 +23,6 @@
 ///
 /// 	h2 {
 /// 		@include font($font-h2);
-/// 	}
-/// @example css Output
-/// 	h1 {
-/// 		font-family: Arial, sans-serif;
-/// 		font-size: 2em;
-/// 		text-transform: uppercase;
-/// 	}
-///
-/// 	h2 {
-/// 		font-family: Arial, sans-serif;
-/// 		font-size: 1.5em;
-/// 		font-style: italic;
-/// 		text-transform: uppercase;
 /// 	}
 @mixin font($settings) {
 	font: {
