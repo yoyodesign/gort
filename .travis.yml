@@ -1,7 +1,7 @@
 language: node_js
 node_js: 14.5.0
 notifications:
-  slack: "yoyodesign:4HjysiaAvCJPeibgAYAFssht"
+  slack: "$SLACK_KEY"
 after_success: npm run docs
 deploy:
   - provider: npm
