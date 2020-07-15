@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup
+      - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Node
         uses: actions/setup-node@v2-beta
         with:
           node-version: '14'
