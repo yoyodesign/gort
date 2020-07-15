@@ -1,4 +1,4 @@
-[![Build status](https://travis-ci.org/yoyodesign/gort.svg?branch=develop)](https://travis-ci.org/yoyodesign/gort)
+[![Build status](https://github.com/yoyodesign/gort/workflows/Build/badge.svg)](https://github.com/yoyodesign/gort/actions?query=workflow%3ABuild)
 [![NPM version](https://badge.fury.io/js/yoyo-gort.svg)](https://badge.fury.io/js/yoyo-gort)
 
 # Gort
