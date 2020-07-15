@@ -12,6 +12,8 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: '14'
+
+      - name: Install
         run: npm i
 
       - name: Lint
