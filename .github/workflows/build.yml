@@ -10,8 +10,8 @@ jobs:
       - name: Setup
         uses: actions/checkout@v2
         uses: actions/setup-node@v2-beta
-          with:
-            node-version: '14'
+        with:
+          node-version: '14'
         run: npm i
 
       - name: Lint
