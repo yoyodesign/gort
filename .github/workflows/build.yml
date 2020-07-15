@@ -10,16 +10,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Node
+      - name: Setup Node
         uses: actions/setup-node@v2-beta
         with:
           node-version: '14'
 
-      - name: Install
+      - name: Install NPM packages
         run: npm i
 
-      - name: Lint
-        run: npm run lint
+      - name: Run linter
+        run: npx stylelint lib/**/*.scss
 
-      - name: Unit
+      - name: Run unit tests
         run: npm run unit
