@@ -22,7 +22,7 @@
 /// 	.foo.foo.foo {
 /// 		color: green;
 /// 	}
-@mixin boost($count: 1){
+@mixin boost($count: 2) {
 	$selector: "";
 
 	@for $i from 1 through $count {
