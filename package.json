@@ -17,7 +17,7 @@
     "stylelint-scss": "^3.18.0"
   },
   "scripts": {
-    "lint": "stylelint lib/**/*.scss test/**/*.scss",
+    "lint": "prettier --check . && stylelint lib/**/*.scss test/**/*.scss",
     "unit": "mocha",
     "test": "npm run lint && npm run unit",
     "docs": "sassdoc lib",
