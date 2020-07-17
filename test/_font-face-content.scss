@@ -1,3 +1,4 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 @include test-module("_font-face-content") {
 	@include test('_font-face-content("Foo", "fonts/foo")') {
 		@include assert {
@@ -6,7 +7,6 @@
 			}
 
 			@include expect {
-				/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
 				font-family: "Foo";
 				src: url("fonts/foo.woff2") format("woff2"),
 					url("fonts/foo.woff") format("woff");
@@ -21,7 +21,6 @@
 			}
 
 			@include expect {
-				/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
 				font-family: "Foo Bold";
 				src: url("fonts/foo-bold.woff2") format("woff2"),
 					url("fonts/foo-bold.woff") format("woff");
@@ -46,7 +45,6 @@
 			}
 
 			@include expect {
-				/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
 				font-family: "Foo Bold";
 				src: url("fonts/foo-bold.ttf") format("truetype");
 				font-weight: 700;
