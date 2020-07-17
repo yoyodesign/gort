@@ -39,7 +39,7 @@
 		}
 	}
 
-	@include test("audio-only-class(\".text-output\")") {
+	@include test('audio-only-class(".text-output")') {
 		@include assert {
 			@include output {
 				@include audio-only-class(".text-output");

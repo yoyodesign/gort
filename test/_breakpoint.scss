@@ -56,7 +56,9 @@
 	@include test("breakpoint((max-width 1024px) (orientation landscape))") {
 		@include assert {
 			@include output {
-				@include breakpoint((max-width 1024px) (orientation landscape)) {
+				@include breakpoint(
+					(max-width 1024px) (orientation landscape)
+				) {
 					color: red;
 				}
 			}
@@ -74,7 +76,9 @@
 	@include test("breakpoint(((max-width 1024px), (orientation landscape)))") {
 		@include assert {
 			@include output {
-				@include breakpoint(((max-width 1024px), (orientation landscape))) {
+				@include breakpoint(
+					((max-width 1024px), (orientation landscape))
+				) {
 					color: red;
 				}
 			}

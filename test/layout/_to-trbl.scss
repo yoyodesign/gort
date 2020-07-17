@@ -16,10 +16,16 @@
 	}
 
 	@include test("to-trbl(100px null 50px 1em)") {
-		@include assert-equal(to-trbl(100px null 50px 1em), (100px null 50px 1em));
+		@include assert-equal(
+			to-trbl(100px null 50px 1em),
+			(100px null 50px 1em)
+		);
 	}
 
 	@include test("to-trbl(100px null 50px 1em 50%)") {
-		@include assert-equal(to-trbl(100px null 50px 1em 50%), (100px null 50px 1em));
+		@include assert-equal(
+			to-trbl(100px null 50px 1em 50%),
+			(100px null 50px 1em)
+		);
 	}
 }

@@ -13,7 +13,7 @@
 		}
 	}
 
-	@include test("align-center(\"x\")") {
+	@include test('align-center("x")') {
 		@include assert {
 			@include output {
 				@include align-center("x");
@@ -26,7 +26,7 @@
 		}
 	}
 
-	@include test("align-center(\"y\")") {
+	@include test('align-center("y")') {
 		@include assert {
 			@include output {
 				@include align-center("y");
@@ -54,7 +54,7 @@
 		}
 	}
 
-	@include test("align-center(\"y\", absolute)") {
+	@include test('align-center("y", absolute)') {
 		@include assert {
 			@include output {
 				@include align-center("y", absolute);

@@ -15,14 +15,11 @@
 
 	@if (_breakpoint-is-property-value-pair($queries)) {
 		$list: _breakpoint-get-property-value-string($queries);
-	}
-	@else {
+	} @else {
 		@each $query in $queries {
 			@if ($is-first) {
 				$is-first: false;
-			}
-
-			@else {
+			} @else {
 				$list: $list + $separator;
 			}
 

@@ -3,7 +3,10 @@
 		@include assert {
 			@include output {
 				$primary: (
-					font-family: (Arial, sans-serif)
+					font-family: (
+						Arial,
+						sans-serif,
+					),
 				);
 
 				@include font($primary);
@@ -19,8 +22,11 @@
 		@include assert {
 			@include output {
 				$primary: (
-					font-family: (Arial, sans-serif),
-					font-size: 18px
+					font-family: (
+						Arial,
+						sans-serif,
+					),
+					font-size: 18px,
 				);
 
 				@include font($primary);
@@ -37,9 +43,12 @@
 		@include assert {
 			@include output {
 				$primary: (
-					font-family: (Arial, sans-serif),
+					font-family: (
+						Arial,
+						sans-serif,
+					),
 					font-size: 18px,
-					font-style: italic
+					font-style: italic,
 				);
 
 				@include font($primary);
@@ -57,10 +66,13 @@
 		@include assert {
 			@include output {
 				$primary: (
-					font-family: (Arial, sans-serif),
+					font-family: (
+						Arial,
+						sans-serif,
+					),
 					font-size: 18px,
 					font-style: italic,
-					font-weight: 400
+					font-weight: 400,
 				);
 
 				@include font($primary);
@@ -79,11 +91,14 @@
 		@include assert {
 			@include output {
 				$primary: (
-					font-family: (Arial, sans-serif),
+					font-family: (
+						Arial,
+						sans-serif,
+					),
 					font-size: 18px,
 					font-style: italic,
 					font-weight: 400,
-					letter-spacing: 0.05em
+					letter-spacing: 0.05em,
 				);
 
 				@include font($primary);
@@ -103,13 +118,16 @@
 		@include assert {
 			@include output {
 				$primary: (
-					font-family: (Arial, sans-serif),
+					font-family: (
+						Arial,
+						sans-serif,
+					),
 					font-size: 18px,
 					font-style: italic,
 					font-weight: 400,
 					letter-spacing: 0.05em,
 					line-height: 1.1,
-					text-transform: uppercase
+					text-transform: uppercase,
 				);
 
 				@include font($primary);
@@ -137,7 +155,10 @@
 					text-transform: uppercase,
 					line-height: 1.1,
 					font-style: italic,
-					font-family: (Arial, sans-serif)
+					font-family: (
+						Arial,
+						sans-serif,
+					),
 				);
 
 				@include font($primary);

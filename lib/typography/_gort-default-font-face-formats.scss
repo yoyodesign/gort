@@ -4,4 +4,7 @@
 ////
 
 /// Default `@font-face` formats.
-$gort-default-font-face-formats: (woff2: woff2, woff: woff) !default;
+$gort-default-font-face-formats: (
+	woff2: woff2,
+	woff: woff,
+) !default;

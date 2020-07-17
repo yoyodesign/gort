@@ -17,7 +17,7 @@
 		}
 	}
 
-	@include test("arrow(\"up\")") {
+	@include test('arrow("up")') {
 		@include assert {
 			@include output {
 				@include arrow("up");
@@ -35,7 +35,7 @@
 		}
 	}
 
-	@include test("arrow(\"right\")") {
+	@include test('arrow("right")') {
 		@include assert {
 			@include output {
 				@include arrow("right");
@@ -53,7 +53,7 @@
 		}
 	}
 
-	@include test("arrow(\"down\")") {
+	@include test('arrow("down")') {
 		@include assert {
 			@include output {
 				@include arrow("down");
@@ -71,7 +71,7 @@
 		}
 	}
 
-	@include test("arrow(\"left\")") {
+	@include test('arrow("left")') {
 		@include assert {
 			@include output {
 				@include arrow("left");

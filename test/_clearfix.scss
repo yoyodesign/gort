@@ -31,7 +31,7 @@
 		}
 	}
 
-	@include test("clearfix-class(\".test-output\")") {
+	@include test('clearfix-class(".test-output")') {
 		@include assert {
 			@include output {
 				@include clearfix-class(".test-output");

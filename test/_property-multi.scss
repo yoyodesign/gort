@@ -1,5 +1,5 @@
 @include test-module("property-multi") {
-	@include test("property-multi(margin, (), 20px)") {
+	@include test("property-multi(margin,(), 20px)") {
 		@include assert {
 			@include output {
 				@include property-multi(margin, (), 20px);
@@ -11,7 +11,7 @@
 		}
 	}
 
-	@include test("property-multi(font, (family), sans-serif") {
+	@include test("property-multi(font,(family), sans-serif") {
 		@include assert {
 			@include output {
 				@include property-multi(font, (family), sans-serif);
@@ -23,7 +23,7 @@
 		}
 	}
 
-	@include test("property-multi(border, (top, right), 2px solid red)") {
+	@include test("property-multi(border,(top, right), 2px solid red)") {
 		@include assert {
 			@include output {
 				@include property-multi(border, (top, right), 2px solid red);
