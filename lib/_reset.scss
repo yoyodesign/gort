@@ -101,11 +101,6 @@
 		-webkit-border-radius: 0;
 		border-radius: 0;
 
-		&:focus,
-		&[type="search"]:focus {
-			outline-offset: -2px;
-		}
-
 		&[type="search"] {
 			appearance: none;
 			box-sizing: border-box;
@@ -113,6 +108,11 @@
 			&::-webkit-clear-button {
 				display: none;
 			}
+		}
+
+		&:focus,
+		&[type="search"]:focus {
+			outline-offset: -2px;
 		}
 
 		&[type="number"] {
@@ -144,6 +144,7 @@
 
 	img {
 		object-fit: cover;
+		/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
 		font-family: "object-fit: cover;";
 	}
 

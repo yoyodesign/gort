@@ -6,6 +6,7 @@
 			}
 
 			@include expect {
+				/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
 				font-family: "Foo";
 				src: url("fonts/foo.woff2") format("woff2"),
 					url("fonts/foo.woff") format("woff");
@@ -20,6 +21,7 @@
 			}
 
 			@include expect {
+				/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
 				font-family: "Foo Bold";
 				src: url("fonts/foo-bold.woff2") format("woff2"),
 					url("fonts/foo-bold.woff") format("woff");
@@ -44,6 +46,7 @@
 			}
 
 			@include expect {
+				/* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
 				font-family: "Foo Bold";
 				src: url("fonts/foo-bold.ttf") format("truetype");
 				font-weight: 700;
