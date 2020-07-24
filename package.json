@@ -1,29 +1,29 @@
 {
-  "name": "yoyo-gort",
-  "version": "1.8.0",
-  "main": "index.js",
-  "repository": "git@github.com:yoyodesign/gort",
-  "author": "Calvin Davis <calvin.davis@yoyodesign.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "mocha": "^8.0.1",
-    "node-sass": "^4.14.1",
-    "prettier": "2.0.5",
-    "sass-true": "^5.0.0",
-    "sassdoc": "^2.7.2",
-    "stylelint": "^13.6.1",
-    "stylelint-config-prettier": "8.0.2",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-scss": "^3.18.0"
-  },
-  "scripts": {
-    "lint": "prettier --check . && stylelint lib/**/*.scss test/**/*.scss",
-    "unit": "mocha",
-    "test": "npm run lint && npm run unit",
-    "docs": "sassdoc lib",
-    "prettier": "prettier --write ."
-  },
-  "engines": {
-    "node": ">=14.5.0"
-  }
+	"name": "yoyo-gort",
+	"version": "1.8.0",
+	"main": "index.js",
+	"repository": "git@github.com:yoyodesign/gort",
+	"author": "Calvin Davis <calvin.davis@yoyodesign.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"mocha": "^8.0.1",
+		"node-sass": "^4.14.1",
+		"prettier": "2.0.5",
+		"sass-true": "^5.0.0",
+		"sassdoc": "^2.7.2",
+		"stylelint": "^13.6.1",
+		"stylelint-config-prettier": "8.0.2",
+		"stylelint-config-recommended": "^3.0.0",
+		"stylelint-scss": "^3.18.0"
+	},
+	"scripts": {
+		"lint": "prettier --check . && stylelint lib/**/*.scss test/**/*.scss",
+		"unit": "mocha",
+		"test": "npm run lint && npm run unit",
+		"docs": "sassdoc lib",
+		"prettier": "prettier --write ."
+	},
+	"engines": {
+		"node": ">=14.5.0"
+	}
 }
