@@ -1,6 +1,9 @@
-var path = require("path");
-var sassTrue = require("sass-true");
+const sass = require("sass");
+const sassTrue = require("sass-true");
 
-var file = path.join(__dirname, "_test.scss");
-
-sassTrue.runSass({ file }, { describe, it });
+sassTrue.runSass(
+	{
+		file: "./test/_test.scss",
+	},
+	{ describe, it, sass }
+);

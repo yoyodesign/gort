@@ -1,4 +1,4 @@
-@import "true";
+@use "true" as *;
 @import "../lib/gort";
 
 @import "align-center";
