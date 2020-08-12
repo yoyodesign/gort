@@ -1,5 +1,5 @@
 @use "true" as *;
-@import "../lib/gort";
+@use "gort" as *;
 
 @import "align-center";
 @import "arrow";
@@ -9,7 +9,7 @@
 @import "breakpoint";
 @import "clearfix";
 @import "font";
-@import "font-face-content";
+// @import "font-face-content";
 
 @import "layout/__index";
 

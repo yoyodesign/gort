@@ -4,6 +4,11 @@ const sassTrue = require("sass-true");
 sassTrue.runSass(
 	{
 		file: "./test/_test.scss",
+		includePaths: ["./lib"],
 	},
-	{ describe, it, sass }
+	{
+		describe,
+		it,
+		sass,
+	}
 );
