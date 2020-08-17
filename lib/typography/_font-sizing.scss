@@ -4,9 +4,9 @@
 ////
 
 /// Applies font-size, line-height and letter-spacing all at once.
-/// @param {Number} $font-size [0]
-/// @param {Number} $line-height [1]
-/// @param {Number} $letter-spacing [2]
+/// @param {Number} $font-size - [undefined] Font size
+/// @param {Number} $line-height - [undefined] Line height
+/// @param {Number} $letter-spacing [undefined] Letter spacing
 @mixin font-sizing($font-size: "undefined", $line-height: "undefined", $letter-spacing: "undefined") {
 	@if $font-size !="undefined" {
 		font-size: rem($font-size);

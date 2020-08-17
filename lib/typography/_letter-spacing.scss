@@ -3,11 +3,11 @@
 /// @author Mike Masey
 ////
 
-$browser-context: 16;
+@import "../gort-default-base-font-size";
 
 /// Applies font-size, line-height and letter-spacing all at once.
-/// @param {Number} $px [0]
-/// @param {Number} $browser-context [1]
-@function letter-spacing($px, $context: $browser-context) {
+/// @param {Number} $px - Font size
+/// @param {Number} $browser-context - [$gort-default-base-font-size] Base font size
+@function letter-spacing($px, $context: $gort-default-base-font-size) {
 	@return ((1 / $context) * $px) * 1em;
 }
