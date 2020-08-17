@@ -2,18 +2,18 @@
 /// @author Mike Masey
 ////
 
-@import "gort-default-browser-context";
+@import "gort-default-base-font-size";
 
 /// Converts a px value to em value.
 /// @param {Number} $px - Property name
-/// @param {Number} $browser-context [$gort-default-browser-context] - Broswer context
-@function em($px, $context: $gort-default-browser-context) {
+/// @param {Number} $browser-context [$gort-default-base-font-size] - Base font size
+@function em($px, $context: $gort-default-base-font-size) {
 	@return ($px / $context) * 1em;
 }
 
 /// Converts a px value to rem value.
 /// @param {Number} $px - Property name
-/// @param {Number} $browser-context [$gort-default-browser-context] - Broswer context
-@function rem($px, $context: $gort-default-browser-context) {
+/// @param {Number} $browser-context [$gort-default-base-font-size] - Base font size
+@function rem($px, $context: $gort-default-base-font-size) {
 	@return ($px / $context) * 1rem;
 }
