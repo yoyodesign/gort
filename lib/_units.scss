@@ -1,0 +1,19 @@
+////
+/// @author Mike Masey
+////
+
+@import "gort-default-browser-context";
+
+/// Converts a px value to em value.
+/// @param {Number} $px - Property name
+/// @param {Number} $browser-context [$gort-default-browser-context] - Broswer context
+@function em($px, $context: $gort-default-browser-context) {
+	@return ($px / $context) * 1em;
+}
+
+/// Converts a px value to rem value.
+/// @param {Number} $px - Property name
+/// @param {Number} $browser-context [$gort-default-browser-context] - Broswer context
+@function rem($px, $context: $gort-default-browser-context) {
+	@return ($px / $context) * 1rem;
+}
