@@ -1,0 +1,13 @@
+////
+/// @group typography
+/// @author Mike Masey
+////
+
+$browser-context: 16;
+
+/// Applies font-size, line-height and letter-spacing all at once.
+/// @param {Number} $px [0]
+/// @param {Number} $browser-context [1]
+@function letter-spacing($px, $context: $browser-context) {
+	@return ((1 / $context) * $px) * 1em;
+}

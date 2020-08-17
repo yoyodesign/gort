@@ -1,0 +1,13 @@
+@include test-module("font-sizing") {
+	@include test("one-property") {
+		@include assert {
+			@include output {
+				@include font-sizing(16);
+			}
+
+			@include expect {
+				font-size: 1em;
+			}
+		}
+	}
+}
