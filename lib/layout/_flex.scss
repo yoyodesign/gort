@@ -1,0 +1,26 @@
+////
+/// @group layout
+/// @author Zed Barker-Flower
+////
+
+/// Sets `flex`, `justify-content`, `align-items`, `flex-wrap` and `flex-direction` properties.
+/// @param {String} $justify-content - [""] Justify content
+/// @param {String} $align-items - [""] Align items
+/// @param {String} $flex-wrap - [""] Flex wrap
+/// @param {String} $flex-direction - [""] Flex direction
+@mixin flex($justify-content: "", $align-items: "", $flex-wrap: "", $flex-direction: "") {
+	display: flex;
+
+	@if $justify-content != "" {
+		justify-content: $justify-content;
+	}
+	@if $align-items != "" {
+		align-items: $align-items;
+	}
+	@if $flex-wrap != "" {
+		flex-wrap: $flex-wrap;
+	}
+	@if $flex-direction != "" {
+		flex-direction: $flex-direction;
+	}
+}
