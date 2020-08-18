@@ -1,0 +1,87 @@
+@include test-module("flex") {
+	@include test("no-properties") {
+		@include assert {
+			@include output {
+				@include flex;
+			}
+
+			@include expect {
+				display: flex;
+			}
+		}
+	}
+
+	@include test("one-property") {
+		@include assert {
+			@include output {
+				@include flex(center);
+			}
+
+			@include expect {
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+
+	@include test("two-properties") {
+		@include assert {
+			@include output {
+				@include flex(center, center);
+			}
+
+			@include expect {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+
+	@include test("three-properties") {
+		@include assert {
+			@include output {
+				@include flex(center, center, wrap);
+			}
+
+			@include expect {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+		}
+	}
+
+	@include test("four-properties") {
+		@include assert {
+			@include output {
+				@include flex(center, center, wrap, row-reverse);
+			}
+
+			@include expect {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
+	@include test("mixed-properties") {
+		@include assert {
+			@include output {
+				@include flex($flex-wrap: wrap, $flex-direction: row-reverse, $align-items: center, $justify-content: center);
+			}
+
+			@include expect {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}
