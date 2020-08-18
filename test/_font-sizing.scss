@@ -1,0 +1,40 @@
+@include test-module("font-sizing") {
+	@include test("one-property") {
+		@include assert {
+			@include output {
+				@include font-sizing(16);
+			}
+
+			@include expect {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	@include test("two-properties") {
+		@include assert {
+			@include output {
+				@include font-sizing(16, 32);
+			}
+
+			@include expect {
+				font-size: 1rem;
+				line-height: 2;
+			}
+		}
+	}
+
+	@include test("three-properties") {
+		@include assert {
+			@include output {
+				@include font-sizing(16, 32, 64);
+			}
+
+			@include expect {
+				font-size: 1rem;
+				line-height: 2;
+				letter-spacing: 4em;
+			}
+		}
+	}
+}

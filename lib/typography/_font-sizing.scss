@@ -1,0 +1,22 @@
+////
+/// @group typography
+/// @author Zed Barker-Flower
+////
+
+/// Applies font-size, line-height and letter-spacing all at once.
+/// @param {Number} $font-size - [undefined] Font size
+/// @param {Number} $line-height - [undefined] Line height
+/// @param {Number} $letter-spacing [undefined] Letter spacing
+@mixin font-sizing($font-size: "undefined", $line-height: "undefined", $letter-spacing: "undefined") {
+	@if $font-size !="undefined" {
+		font-size: rem($font-size);
+
+		@if $line-height !="undefined" {
+			line-height: ($line-height / $font-size);
+		}
+
+		@if $letter-spacing !="undefined" {
+			letter-spacing: letter-spacing($letter-spacing, $font-size);
+		}
+	}
+}
