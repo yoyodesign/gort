@@ -1,0 +1,19 @@
+////
+/// @author Mike Masey
+////
+
+@import "gort-default-base-font-size";
+
+/// Converts a px value to em value.
+/// @param {Number} $px - Pixel value
+/// @param {Number} $browser-context [$gort-default-base-font-size] - Base font size
+@function em($px, $context: $gort-default-base-font-size) {
+	@return ($px / $context) * 1em;
+}
+
+/// Converts a px value to rem value.
+/// @param {Number} $px - Pixel value
+/// @param {Number} $browser-context [$gort-default-base-font-size] - Base font size
+@function rem($px, $context: $gort-default-base-font-size) {
+	@return ($px / $context) * 1rem;
+}
