@@ -1,0 +1,25 @@
+@include test-module("units") {
+	@include test("one-property") {
+		@include assert {
+			@include output {
+				width: rem(16);
+			}
+
+			@include expect {
+				width: 1rem;
+			}
+		}
+	}
+
+	@include test("two-properties") {
+		@include assert {
+			@include output {
+				width: rem(16, 32);
+			}
+
+			@include expect {
+				width: 0.5rem;
+			}
+		}
+	}
+}

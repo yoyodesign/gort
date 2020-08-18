@@ -10,6 +10,8 @@
 @import "clearfix";
 @import "font";
 @import "font-face-content";
+@import "font-sizing";
+@import "letter-spacing";
 
 @import "layout/__index";
 
@@ -18,5 +20,6 @@
 @import "property-multi";
 @import "property-x-y";
 @import "size";
+@import "units";
 
 @include report;
