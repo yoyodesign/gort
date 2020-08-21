@@ -1,0 +1,1062 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Gort</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Gort - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Gort</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="breakpoint"><a href="#breakpoint">Breakpoint</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="breakpoint-function"><a href="#breakpoint-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="breakpoint" data-name="_breakpoint-get-property-value-string" data-type="function"><a href="#breakpoint-function-_breakpoint-get-property-value-string">_breakpoint-get-property-value-string</a></li><li class="sidebar__item sassdoc__item" data-group="breakpoint" data-name="_breakpoint-is-property-value-pair" data-type="function"><a href="#breakpoint-function-_breakpoint-is-property-value-pair">_breakpoint-is-property-value-pair</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="breakpoint-mixin"><a href="#breakpoint-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="breakpoint" data-name="_breakpoint-queries" data-type="mixin"><a href="#breakpoint-mixin-_breakpoint-queries">_breakpoint-queries</a></li><li class="sidebar__item sassdoc__item" data-group="breakpoint" data-name="breakpoint" data-type="mixin"><a href="#breakpoint-mixin-breakpoint">breakpoint</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="layout"><a href="#layout">Layout</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-mixin"><a href="#layout-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="absolute" data-type="mixin"><a href="#layout-mixin-absolute">absolute</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="absolute-top-left" data-type="mixin"><a href="#layout-mixin-absolute-top-left">absolute-top-left</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="absolute-fill" data-type="mixin"><a href="#layout-mixin-absolute-fill">absolute-fill</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="child-margins-x" data-type="mixin"><a href="#layout-mixin-child-margins-x">child-margins-x</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="child-margins-y" data-type="mixin"><a href="#layout-mixin-child-margins-y">child-margins-y</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="fixed" data-type="mixin"><a href="#layout-mixin-fixed">fixed</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="fixed-top-left" data-type="mixin"><a href="#layout-mixin-fixed-top-left">fixed-top-left</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="fixed-fill" data-type="mixin"><a href="#layout-mixin-fixed-fill">fixed-fill</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="flex" data-type="mixin"><a href="#layout-mixin-flex">flex</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="position" data-type="mixin"><a href="#layout-mixin-position">position</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-function"><a href="#layout-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="columns" data-type="function"><a href="#layout-function-columns">columns</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name="to-trbl" data-type="function"><a href="#layout-function-to-trbl">to-trbl</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-variable"><a href="#layout-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="gort-default-column-count" data-type="variable"><a href="#layout-variable-gort-default-column-count">gort-default-column-count</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="typography"><a href="#typography">Typography</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="typography-mixin"><a href="#typography-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="typography" data-name="_font-face-content" data-type="mixin"><a href="#typography-mixin-_font-face-content">_font-face-content</a></li><li class="sidebar__item sassdoc__item" data-group="typography" data-name="font-face" data-type="mixin"><a href="#typography-mixin-font-face">font-face</a></li><li class="sidebar__item sassdoc__item" data-group="typography" data-name="font-sizing" data-type="mixin"><a href="#typography-mixin-font-sizing">font-sizing</a></li><li class="sidebar__item sassdoc__item" data-group="typography" data-name="font" data-type="mixin"><a href="#typography-mixin-font">font</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="typography-variable"><a href="#typography-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="typography" data-name="gort-default-font-face-formats" data-type="variable"><a href="#typography-variable-gort-default-font-face-formats">gort-default-font-face-formats</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="typography-function"><a href="#typography-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="typography" data-name="letter-spacing" data-type="function"><a href="#typography-function-letter-spacing">letter-spacing</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="align-center" data-type="mixin"><a href="#undefined-mixin-align-center">align-center</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="arrow" data-type="mixin"><a href="#undefined-mixin-arrow">arrow</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="aspect-ratio" data-type="mixin"><a href="#undefined-mixin-aspect-ratio">aspect-ratio</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="audio-only" data-type="mixin"><a href="#undefined-mixin-audio-only">audio-only</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="audio-only-class" data-type="mixin"><a href="#undefined-mixin-audio-only-class">audio-only-class</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="boost" data-type="mixin"><a href="#undefined-mixin-boost">boost</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="clearfix" data-type="mixin"><a href="#undefined-mixin-clearfix">clearfix</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="clearfix-class" data-type="mixin"><a href="#undefined-mixin-clearfix-class">clearfix-class</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="margin-x" data-type="mixin"><a href="#undefined-mixin-margin-x">margin-x</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="margin-y" data-type="mixin"><a href="#undefined-mixin-margin-y">margin-y</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="normalize" data-type="mixin"><a href="#undefined-mixin-normalize">normalize</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="padding-x" data-type="mixin"><a href="#undefined-mixin-padding-x">padding-x</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="padding-y" data-type="mixin"><a href="#undefined-mixin-padding-y">padding-y</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="property-multi" data-type="mixin"><a href="#undefined-mixin-property-multi">property-multi</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="property-x" data-type="mixin"><a href="#undefined-mixin-property-x">property-x</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="property-y" data-type="mixin"><a href="#undefined-mixin-property-y">property-y</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="reset" data-type="mixin"><a href="#undefined-mixin-reset">reset</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="size" data-type="mixin"><a href="#undefined-mixin-size">size</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="gort-default-base-font-size" data-type="variable"><a href="#undefined-variable-gort-default-base-font-size">gort-default-base-font-size</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="em" data-type="function"><a href="#undefined-function-em">em</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="rem" data-type="function"><a href="#undefined-function-rem">rem</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="breakpoint"><div class="container">Breakpoint</div></h1><section class="main__sub-section" id="breakpoint-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="breakpoint-function-_breakpoint-get-property-value-string"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#function-_breakpoint-get-property-value-string">_breakpoint-get-property-value-string</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function _breakpoint-get-property-value-string($list) { 
+	$property: nth($list, 1);
+	$value: nth($list, 2);
+
+	@return &quot;(#{$property}: #{$value})&quot;;
+ }" data-collapsed="@function _breakpoint-get-property-value-string($list) { ... }"><code>@function _breakpoint-get-property-value-string($list) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$list</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-_breakpoint-queries"><code>_breakpoint-queries</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-_breakpoint-queries"><code>_breakpoint-queries</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="breakpoint-function-_breakpoint-is-property-value-pair"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#function-_breakpoint-is-property-value-pair">_breakpoint-is-property-value-pair</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function _breakpoint-is-property-value-pair($list) { 
+	$is-pair: length($list) == 2;
+
+	@if not $is-pair {
+		@return false;
+	}
+
+	$property: nth($list, 1);
+
+	@return type-of($property) == string;
+ }" data-collapsed="@function _breakpoint-is-property-value-pair($list) { ... }"><code>@function _breakpoint-is-property-value-pair($list) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$list</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Boolean</code></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-_breakpoint-queries"><code>_breakpoint-queries</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section></section><section class="main__sub-section" id="breakpoint-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="breakpoint-mixin-_breakpoint-queries"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_breakpoint-queries">_breakpoint-queries</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _breakpoint-queries($queries) { 
+	$list: &quot;&quot;;
+	$is-first: true;
+	$separator: if(list-separator($queries) == space, &quot; and &quot;, &quot;, &quot;);
+
+	@if (_breakpoint-is-property-value-pair($queries)) {
+		$list: _breakpoint-get-property-value-string($queries);
+	}
+	@else {
+		@each $query in $queries {
+			@if ($is-first) {
+				$is-first: false;
+			}
+
+			@else {
+				$list: $list + $separator;
+			}
+
+			$list: $list + _breakpoint-get-property-value-string($query);
+		}
+	}
+
+	@media #{$list} {
+		@content;
+	}
+ }" data-collapsed="@mixin _breakpoint-queries($queries) { ... }"><code>@mixin _breakpoint-queries($queries) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$queries</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#breakpoint-function-_breakpoint-is-property-value-pair"><code>_breakpoint-is-property-value-pair</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#breakpoint-function-_breakpoint-get-property-value-string"><code>_breakpoint-get-property-value-string</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#breakpoint-function-_breakpoint-get-property-value-string"><code>_breakpoint-get-property-value-string</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-breakpoint"><code>breakpoint</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-breakpoint"><code>breakpoint</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-breakpoint"><code>breakpoint</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-breakpoint"><code>breakpoint</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="breakpoint-mixin-breakpoint"><h3 class="item__heading"><a class="item__name" href="#mixin-breakpoint">breakpoint</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin breakpoint($query) { 
+	$length: length($query);
+
+	@if (type-of(nth($query, 1)) == list) {
+		@include _breakpoint-queries($query) {
+			@content;
+		}
+	}
+
+	@else if ($length == 1) {
+		$a: nth($query, 1);
+		$type-a: type-of($a);
+
+		@if ($type-a == number) {
+			@include _breakpoint-queries(min-width $a) {
+				@content;
+			}
+		}
+	}
+
+	@else if ($length == 2) {
+		$a: nth($query, 1);
+		$type-a: type-of($a);
+		$b: nth($query, 2);
+		$type-b: type-of($b);
+
+		@if $type-a == number and $type-b == number {
+			@include _breakpoint-queries((min-width $a) (max-width $b)) {
+				@content;
+			}
+		}
+
+		@else if ($type-a == string and $type-b == number) {
+			@include _breakpoint-queries($a $b) {
+				@content;
+			}
+		}
+	}
+ }" data-collapsed="@mixin breakpoint($query) { ... }"><code>@mixin breakpoint($query) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$query</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Input</p></div><pre class="example__code language-scss"><code>$mobile: max-width 560px;
+$tablet: 561px 1024px;
+$desktop: 1025px;
+
+body {
+	@include breakpoint($mobile) {
+		font-size: 14px;
+	}
+
+	@include breakpoint($tablet) {
+		font-size: 16px;
+	}
+
+	@include breakpoint($desktop) {
+		font-size: 18px;
+	}
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Output</p></div><pre class="example__code language-css"><code>@media (max-width: 560px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 561px) and (max-width: 1024px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1025px) {
+	body {
+		font-size: 18px;
+	}
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-_breakpoint-queries"><code>_breakpoint-queries</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-_breakpoint-queries"><code>_breakpoint-queries</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-_breakpoint-queries"><code>_breakpoint-queries</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#breakpoint-mixin-_breakpoint-queries"><code>_breakpoint-queries</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="layout"><div class="container">Layout</div></h1><section class="main__sub-section" id="layout-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="layout-mixin-absolute"><h3 class="item__heading"><a class="item__name" href="#mixin-absolute">absolute</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin absolute($values: ()) { 
+	@include position(absolute, $values);
+ }" data-collapsed="@mixin absolute($values: ()) { ... }"><code>@mixin absolute($values: ()) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets position <code>absolute</code>, and <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> values.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$values</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>List&lt;number&gt;</code></td><td data-label="default"><code>()</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-position"><code>position</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-absolute-top-left"><code>absolute-top-left</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="layout-mixin-absolute-top-left"><h3 class="item__heading"><a class="item__name" href="#mixin-absolute-top-left">absolute-top-left</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin absolute-top-left($top: 0, $left: $top) { 
+	@include absolute($top null null $left);
+ }" data-collapsed="@mixin absolute-top-left($top: 0, $left: $top) { ... }"><code>@mixin absolute-top-left($top: 0, $left: $top) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets position <code>absolute</code>, and <code>top</code> and <code>left</code> values.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$top</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$left</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$top</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-absolute"><code>absolute</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-absolute-fill"><code>absolute-fill</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="layout-mixin-absolute-fill"><h3 class="item__heading"><a class="item__name" href="#mixin-absolute-fill">absolute-fill</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin absolute-fill() { 
+	@include absolute-top-left;
+	@include size(100%);
+ }" data-collapsed="@mixin absolute-fill() { ... }"><code>@mixin absolute-fill() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets position <code>absolute</code>, and <code>width</code> and <code>height</code> to <code>100%</code>.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-absolute-top-left"><code>absolute-top-left</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-size"><code>size</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="layout-mixin-child-margins-x"><h3 class="item__heading"><a class="item__name" href="#mixin-child-margins-x">child-margins-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin child-margins-x($margin: 0) { 
+	&gt; * {
+		&amp;:first-child {
+			margin-left: $margin;
+		}
+
+		&amp;:last-child {
+			margin-right: $margin;
+		}
+	}
+ }" data-collapsed="@mixin child-margins-x($margin: 0) { ... }"><code>@mixin child-margins-x($margin: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets <code>margin-left</code> and <code>margin-right</code> of first and last child respectively.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$margin</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="layout-mixin-child-margins-y"><h3 class="item__heading"><a class="item__name" href="#mixin-child-margins-y">child-margins-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin child-margins-y($margin: 0) { 
+	&gt; * {
+		&amp;:first-child {
+			margin-top: $margin;
+		}
+
+		&amp;:last-child {
+			margin-bottom: $margin;
+		}
+	}
+ }" data-collapsed="@mixin child-margins-y($margin: 0) { ... }"><code>@mixin child-margins-y($margin: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets <code>margin-top</code> and <code>margin-bottom</code> of first and last child respectively.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$margin</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="layout-mixin-fixed"><h3 class="item__heading"><a class="item__name" href="#mixin-fixed">fixed</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fixed($values: ()) { 
+	@include position(fixed, $values);
+ }" data-collapsed="@mixin fixed($values: ()) { ... }"><code>@mixin fixed($values: ()) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets position <code>fixed</code>, and <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> values.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$values</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>List&lt;number&gt;</code></td><td data-label="default"><code>()</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-position"><code>position</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-fixed-top-left"><code>fixed-top-left</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="layout-mixin-fixed-top-left"><h3 class="item__heading"><a class="item__name" href="#mixin-fixed-top-left">fixed-top-left</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fixed-top-left($top: 0, $left: $top) { 
+	@include fixed($top null null $left);
+ }" data-collapsed="@mixin fixed-top-left($top: 0, $left: $top) { ... }"><code>@mixin fixed-top-left($top: 0, $left: $top) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets position <code>fixed</code>, and <code>top</code> and <code>left</code> values.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$top</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$left</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$top</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-fixed"><code>fixed</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-fixed-fill"><code>fixed-fill</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="layout-mixin-fixed-fill"><h3 class="item__heading"><a class="item__name" href="#mixin-fixed-fill">fixed-fill</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fixed-fill() { 
+	@include fixed-top-left;
+	@include size(100%);
+ }" data-collapsed="@mixin fixed-fill() { ... }"><code>@mixin fixed-fill() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets position <code>fixed</code>, and <code>width</code> and <code>height</code> to <code>100%</code>.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-fixed-top-left"><code>fixed-top-left</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-size"><code>size</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="layout-mixin-flex"><h3 class="item__heading"><a class="item__name" href="#mixin-flex">flex</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin flex($justify-content, $align-items, $flex-wrap, $flex-direction) { 
+	display: flex;
+
+	@if $justify-content != &quot;&quot; {
+		justify-content: $justify-content;
+	}
+	@if $align-items != &quot;&quot; {
+		align-items: $align-items;
+	}
+	@if $flex-wrap != &quot;&quot; {
+		flex-wrap: $flex-wrap;
+	}
+	@if $flex-direction != &quot;&quot; {
+		flex-direction: $flex-direction;
+	}
+ }" data-collapsed="@mixin flex($justify-content, $align-items, $flex-wrap, $flex-direction) { ... }"><code>@mixin flex($justify-content, $align-items, $flex-wrap, $flex-direction) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets <code>flex</code>, <code>justify-content</code>, <code>align-items</code>, <code>flex-wrap</code> and <code>flex-direction</code> properties.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$justify-content</code></th><td data-label="desc"><p>[&quot;&quot;] Justify content</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$align-items</code></th><td data-label="desc"><p>[&quot;&quot;] Align items</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$flex-wrap</code></th><td data-label="desc"><p>[&quot;&quot;] Flex wrap</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$flex-direction</code></th><td data-label="desc"><p>[&quot;&quot;] Flex direction</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Zed Barker-Flower</p></li></ul></section><section class="main__item container item" id="layout-mixin-position"><h3 class="item__heading"><a class="item__name" href="#mixin-position">position</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin position($position, $values: ()) { 
+	$trbl: to-trbl($values);
+
+	position: $position;
+	top: nth($trbl, 1);
+	right: nth($trbl, 2);
+	bottom: nth($trbl, 3);
+	left: nth($trbl, 4);
+ }" data-collapsed="@mixin position($position, $values: ()) { ... }"><code>@mixin position($position, $values: ()) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets <code>position</code>, and <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> values.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$position</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Position</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$values</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>List&lt;number&gt;</code></td><td data-label="default"><code>()</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#layout-function-to-trbl"><code>to-trbl</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-absolute"><code>absolute</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-fixed"><code>fixed</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section></section><section class="main__sub-section" id="layout-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="layout-function-columns"><h3 class="item__heading"><a class="item__name" href="#function-columns">columns</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function columns($columns, $column-count) { 
+	@return #{100% / $column-count * $columns};
+ }" data-collapsed="@function columns($columns, $column-count) { ... }"><code>@function columns($columns, $column-count) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Returns percentage size values for columns.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$columns</code></th><td data-label="desc"><p>Columns</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$column-count</code></th><td data-label="desc"><p>[$gort-default-column-count] Column count</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Mike Masey</p></li></ul></section><section class="main__item container item" id="layout-function-to-trbl"><h3 class="item__heading"><a class="item__name" href="#function-to-trbl">to-trbl</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function to-trbl($values) { 
+	@if (length($values) == 0) {
+		@return null null null null;
+	}
+
+	@if (length($values) == 1) {
+		$value: nth($values, 1);
+
+		@return $value $value $value $value;
+	}
+
+	@if (length($values) == 2) {
+		$y: nth($values, 1);
+		$x: nth($values, 2);
+
+		@return $y $x $y $x;
+	}
+
+	@if (length($values) == 3) {
+		$top: nth($values, 1);
+		$x: nth($values, 2);
+		$bottom: nth($values, 3);
+
+		@return $top $x $bottom $x;
+	}
+
+	@if (length($values) &gt;= 4) {
+		@return nth($values, 1) nth($values, 2) nth($values, 3) nth($values, 4);
+	}
+ }" data-collapsed="@function to-trbl($values) { ... }"><code>@function to-trbl($values) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Returns list of sizes in TRBL (top, right, bottom, left) format.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$values</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number[]</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number[]</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>to-trbl(1em)
+// (1em 1em 1em 1em)
+
+to-trbl(1em 0)
+// (1em 0 1em 0)
+
+to-trbl(1em 0 100px)
+// (1em 0 100px 0)
+
+to-trbl(1em 0 100px 50%)
+// (1em 0 100px 50%)</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-position"><code>position</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section></section><section class="main__sub-section" id="layout-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="layout-variable-gort-default-column-count"><h3 class="item__heading"><a class="item__name" href="#variable-gort-default-column-count">gort-default-column-count</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$gort-default-column-count: 24 !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default column count.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Mike Masey</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="typography"><div class="container">Typography</div></h1><section class="main__sub-section" id="typography-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="typography-mixin-_font-face-content"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_font-face-content">_font-face-content</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _font-face-content($family, $path, $weight: null, $formats: $gort-default-font-face-formats) { 
+	$src: &quot;&quot;;
+
+	@each $extension, $format in $formats {
+		$src: $src + if($src == &quot;&quot;, &quot;&quot;, &quot;, &quot;) + &quot;url(\&quot;#{$path}.#{$extension}\&quot;) format(\&quot;#{$format}\&quot;)&quot;;
+	}
+
+	font-family: $family;
+	src: unquote($src);
+	font-weight: if($weight != null, $weight, null);
+ }" data-collapsed="@mixin _font-face-content($family, $path, $weight: null, $formats: $gort-default-font-face-formats) { ... }"><code>@mixin _font-face-content($family, $path, $weight: null, $formats: $gort-default-font-face-formats) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Outputs <code>@font-face</code> directive. Splitting of font-face content into own mixin is necessary because of a True bug.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$family</code></th><td data-label="desc"><p>Font family</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$path</code></th><td data-label="desc"><p>Path to font files (not including file extensions)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$weight</code></th><td data-label="desc"><p>Font weight</p></td><td data-label="type"><code>Weight</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$formats</code></th><td data-label="desc"><p>List of formats</p></td><td data-label="type"><code>List</code></td><td data-label="default"><code>$gort-default-font-face-formats</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#typography-mixin-font-face"><code>font-face</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="typography-mixin-font-face"><h3 class="item__heading"><a class="item__name" href="#mixin-font-face">font-face</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin font-face($family, $path, $weight: null, $formats: $gort-default-font-face-formats) { 
+	@font-face {
+		@include _font-face-content($family, $path, $weight, $formats);
+	}
+ }" data-collapsed="@mixin font-face($family, $path, $weight: null, $formats: $gort-default-font-face-formats) { ... }"><code>@mixin font-face($family, $path, $weight: null, $formats: $gort-default-font-face-formats) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Outputs <code>@font-face</code> directive.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$family</code></th><td data-label="desc"><p>Font family</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$path</code></th><td data-label="desc"><p>Path to font files (not including file extensions)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$weight</code></th><td data-label="desc"><p>Font weight</p></td><td data-label="type"><code>Weight</code></td><td data-label="default"><code>null</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$formats</code></th><td data-label="desc"><p>List of formats</p></td><td data-label="type"><code>List</code></td><td data-label="default"><code>$gort-default-font-face-formats</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#typography-mixin-_font-face-content"><code>_font-face-content</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="typography-mixin-font-sizing"><h3 class="item__heading"><a class="item__name" href="#mixin-font-sizing">font-sizing</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin font-sizing($font-size, $line-height, $letter-spacing: undefined) { 
+	@if $font-size !=&quot;undefined&quot; {
+		font-size: rem($font-size);
+
+		@if $line-height !=&quot;undefined&quot; {
+			line-height: ($line-height / $font-size);
+		}
+
+		@if $letter-spacing !=&quot;undefined&quot; {
+			letter-spacing: letter-spacing($letter-spacing, $font-size);
+		}
+	}
+ }" data-collapsed="@mixin font-sizing($font-size, $line-height, $letter-spacing: undefined) { ... }"><code>@mixin font-sizing($font-size, $line-height, $letter-spacing: undefined) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Applies font-size, line-height and letter-spacing all at once.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$font-size</code></th><td data-label="desc"><p>[undefined] Font size</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$line-height</code></th><td data-label="desc"><p>[undefined] Line height</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$letter-spacing</code></th><td data-label="desc"><p>Letter spacing</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>undefined</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-rem"><code>rem</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#typography-function-letter-spacing"><code>letter-spacing</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Zed Barker-Flower</p></li></ul></section><section class="main__item container item" id="typography-mixin-font"><h3 class="item__heading"><a class="item__name" href="#mixin-font">font</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin font($settings) { 
+	font: {
+		family: map-get($settings, &quot;font-family&quot;);
+		size: map-get($settings, &quot;font-size&quot;);
+		style: map-get($settings, &quot;font-style&quot;);
+		weight: map-get($settings, &quot;font-weight&quot;);
+	}
+	letter-spacing: map-get($settings, &quot;letter-spacing&quot;);
+	line-height: map-get($settings, &quot;line-height&quot;);
+	text-transform: map-get($settings, &quot;text-transform&quot;);
+ }" data-collapsed="@mixin font($settings) { ... }"><code>@mixin font($settings) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$settings</code></th><td data-label="desc"><p>A map of key value pairs for the properties to set for your font</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Input</p></div><pre class="example__code language-scss"><code>$font-h1: (
+	font-family: (Arial, sans-serif),
+	font-size: 2em,
+	text-transform: uppercase
+)
+
+$font-h2: map-merge($font-h1, (
+	font-size: 1.5em,
+	font-style: italic
+))
+
+h1 {
+	@include font($font-h1);
+}
+
+h2 {
+	@include font($font-h2);
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Output</p></div><pre class="example__code language-css"><code>h1 {
+	font-family: Arial, sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: Arial, sans-serif;
+	font-size: 1.5em;
+	font-style: italic;
+	text-transform: uppercase;
+}</code></pre></div><h3 class="item__sub-heading">Authors</h3><ul class="list-unstyled"><li><p>Tom (Alfie) Gaskill</p></li><li><p>Calvin Davis</p></li></ul></section></section><section class="main__sub-section" id="typography-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="typography-variable-gort-default-font-face-formats"><h3 class="item__heading"><a class="item__name" href="#variable-gort-default-font-face-formats">gort-default-font-face-formats</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$gort-default-font-face-formats: (woff2: woff2, woff: woff) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default <code>@font-face</code> formats.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section></section><section class="main__sub-section" id="typography-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="typography-function-letter-spacing"><h3 class="item__heading"><a class="item__name" href="#function-letter-spacing">letter-spacing</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function letter-spacing($px, $browser-context) { 
+	@return ((1 / $context) * $px) * 1em;
+ }" data-collapsed="@function letter-spacing($px, $browser-context) { ... }"><code>@function letter-spacing($px, $browser-context) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Applies font-size, line-height and letter-spacing all at once.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$px</code></th><td data-label="desc"><p>Font size</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$browser-context</code></th><td data-label="desc"><p>[$gort-default-base-font-size] Base font size</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#typography-mixin-font-sizing"><code>font-sizing</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Mike Masey</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-align-center"><h3 class="item__heading"><a class="item__name" href="#mixin-align-center">align-center</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin align-center($axis: &quot;xy&quot;, $position: null) { 
+	position: $position;
+
+	@if ($axis == &quot;xy&quot;) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@if ($axis == &quot;x&quot;) {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	@if ($axis == &quot;y&quot;) {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+ }" data-collapsed="@mixin align-center($axis: &quot;xy&quot;, $position: null) { ... }"><code>@mixin align-center($axis: &quot;xy&quot;, $position: null) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Applies center alignment styles.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$axis</code></th><td data-label="desc"><p>Alignment type. Can be <code>&quot;xy&quot;</code>, <code>&quot;x&quot;</code> or <code>&quot;y&quot;</code>.</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&quot;xy&quot;</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$position</code></th><td data-label="desc"><p>Position value. Can be any css position value, e.g. <code>relative</code>, <code>absolute</code>, <code>fixed</code> etc.</p></td><td data-label="type"><code>Position</code></td><td data-label="default"><code>null</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Input</p></div><pre class="example__code language-scss"><code>.feeb {
+	@include align-center;
+}
+
+.foo {
+	@include align-center(&quot;x&quot;);
+}
+
+.bar {
+	@include align-center(&quot;y&quot;, relative);
+}
+
+.foo-bar {
+	@include align-center($position: absolute);
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Output</p></div><pre class="example__code language-css"><code>.feeb {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.foo {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bar {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.foo-bar {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Mike Masey</p></li></ul></section><section class="main__item container item" id="undefined-mixin-arrow"><h3 class="item__heading"><a class="item__name" href="#mixin-arrow">arrow</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin arrow($direction: &quot;right&quot;, $width: 10px, $height: $width, $color: currentColor) { 
+	$half-width: $width / 2;
+	$base: left;
+	$left: top;
+	$right: bottom;
+
+	@if ($direction == &quot;up&quot;) {
+		$base: bottom;
+		$left: left;
+		$right: right;
+	}
+
+	@if ($direction == &quot;down&quot;) {
+		$base: top;
+		$left: right;
+		$right: left;
+	}
+
+	@if ($direction == &quot;left&quot;) {
+		$base: right;
+		$left: bottom;
+		$right: top;
+	}
+
+	@include size;
+	border: 0 solid transparent;
+	border-#{$left}-width: $half-width;
+	border-#{$right}-width: $half-width;
+	border-#{$base}-width: $height;
+	border-#{$base}-color: $color;
+ }" data-collapsed="@mixin arrow($direction: &quot;right&quot;, $width: 10px, $height: $width, $color: currentColor) { ... }"><code>@mixin arrow($direction: &quot;right&quot;, $width: 10px, $height: $width, $color: currentColor) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Creates a CSS arrow.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>Arrow direction. Can be <code>&quot;up&quot;</code>, <code>&quot;right&quot;</code>, <code>&quot;down&quot;</code>, or <code>&quot;left&quot;</code></p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&quot;right&quot;</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>Base length of arrow</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>10px</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc"><p>Height of arrow</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$width</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Color of arrow</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code>currentColor</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-size"><code>size</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://css-tricks.com/snippets/css/css-triangle/">https://css-tricks.com/snippets/css/css-triangle/</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-aspect-ratio"><h3 class="item__heading"><a class="item__name" href="#mixin-aspect-ratio">aspect-ratio</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin aspect-ratio($ratio: 100%) { 
+	position: relative;
+	overflow: hidden;
+
+	&amp;::after {
+		content: &quot;&quot;;
+		display: block;
+		height: 0;
+		padding-bottom: $ratio;
+	}
+ }" data-collapsed="@mixin aspect-ratio($ratio: 100%) { ... }"><code>@mixin aspect-ratio($ratio: 100%) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Add a percentage value for padding-bottom on the ::after pseudo element to maintain the aspect ratio of the parent e.g. 56.25% would be an aspect ratio of 16:9.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$ratio</code></th><td data-label="desc"><p>Aspect ratio as a percentage</p></td><td data-label="type"><code>Percentage</code></td><td data-label="default"><code>100%</code></td></tr></tbody></table><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://www.w3schools.com/howto/howto_css_aspect_ratio.asp">https://www.w3schools.com/howto/howto_css_aspect_ratio.asp</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Tom (Alfie) Gaskill</p></li></ul></section><section class="main__item container item" id="undefined-mixin-audio-only"><h3 class="item__heading"><a class="item__name" href="#mixin-audio-only">audio-only</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin audio-only() { 
+	position: absolute;
+	overflow: hidden;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+ }" data-collapsed="@mixin audio-only() { ... }"><code>@mixin audio-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Applies audio-only styling.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-audio-only-class"><code>audio-only-class</code></a></li></ul><h3 class="item__sub-heading">Authors</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li><li><p>Mike Masey</p></li></ul></section><section class="main__item container item" id="undefined-mixin-audio-only-class"><h3 class="item__heading"><a class="item__name" href="#mixin-audio-only-class">audio-only-class</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin audio-only-class($selector: &quot;.audio-only&quot;) { 
+	#{$selector} {
+		@include audio-only;
+	}
+ }" data-collapsed="@mixin audio-only-class($selector: &quot;.audio-only&quot;) { ... }"><code>@mixin audio-only-class($selector: &quot;.audio-only&quot;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Renders audio-only class.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$selector</code></th><td data-label="desc"><p>Optional selector string</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&quot;.audio-only&quot;</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-audio-only"><code>audio-only</code></a></li></ul><h3 class="item__sub-heading">Authors</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li><li><p>Mike Masey</p></li></ul></section><section class="main__item container item" id="undefined-mixin-boost"><h3 class="item__heading"><a class="item__name" href="#mixin-boost">boost</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin boost($count: 1) { 
+	$selector: &quot;&quot;;
+
+	@for $i from 1 through $count {
+		$selector: $selector + &amp;;
+	}
+
+	&amp;#{$selector} {
+		@content;
+	}
+ }" data-collapsed="@mixin boost($count: 1) { ... }"><code>@mixin boost($count: 1) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Multiplies the specificity of a selector.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$count</code></th><td data-label="desc"><p>The number of times to increase the specificity of the selector.</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Input</p></div><pre class="example__code language-scss"><code>.foo {
+	@include boost() {
+		color: red;
+	}
+
+	@include boost(2) {
+		color: green;
+	}
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Output</p></div><pre class="example__code language-css"><code>.foo.foo {
+	color: red;
+}
+
+.foo.foo.foo {
+	color: green;
+}</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-clearfix"><h3 class="item__heading"><a class="item__name" href="#mixin-clearfix">clearfix</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin clearfix() { 
+	&amp;:after {
+		content: &quot;&quot;;
+		display: block;
+		clear: both;
+	}
+ }" data-collapsed="@mixin clearfix() { ... }"><code>@mixin clearfix() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Applies clearfix styling.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-clearfix-class"><code>clearfix-class</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://cssmojo.com/the-very-latest-clearfix-reloaded/">http://cssmojo.com/the-very-latest-clearfix-reloaded/</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-clearfix-class"><h3 class="item__heading"><a class="item__name" href="#mixin-clearfix-class">clearfix-class</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin clearfix-class($selector: &quot;.clearfix&quot;) { 
+	#{$selector} {
+		@include clearfix;
+	}
+ }" data-collapsed="@mixin clearfix-class($selector: &quot;.clearfix&quot;) { ... }"><code>@mixin clearfix-class($selector: &quot;.clearfix&quot;) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Renders clearfix class.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$selector</code></th><td data-label="desc"><p>Optional selector string</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>&quot;.clearfix&quot;</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-clearfix"><code>clearfix</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-margin-x"><h3 class="item__heading"><a class="item__name" href="#mixin-margin-x">margin-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin margin-x($value: 0) { 
+	@include property-x(margin, $value);
+ }" data-collapsed="@mixin margin-x($value: 0) { ... }"><code>@mixin margin-x($value: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Applies margin-right and -left at once.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Value</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-property-x"><code>property-x</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-margin-y"><h3 class="item__heading"><a class="item__name" href="#mixin-margin-y">margin-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin margin-y($value: 0) { 
+	@include property-y(margin, $value);
+ }" data-collapsed="@mixin margin-y($value: 0) { ... }"><code>@mixin margin-y($value: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Value</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-property-y"><code>property-y</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-normalize"><h3 class="item__heading"><a class="item__name" href="#mixin-normalize">normalize</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin normalize() { 
+	/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+
+	/* Document
+	========================================================================== */
+
+	/**
+	* 1. Correct the line height in all browsers.
+	* 2. Prevent adjustments of font size after orientation changes in
+	*    IE on Windows Phone and in iOS.
+	*/
+
+	html {
+		line-height: 1.15; /* 1 */
+		-ms-text-size-adjust: 100%; /* 2 */
+		-webkit-text-size-adjust: 100%; /* 2 */
+	}
+
+	/* Sections
+	========================================================================== */
+
+	/**
+	* Add the correct display in IE 9-.
+	*/
+
+	article,
+	aside,
+	footer,
+	header,
+	nav,
+	section {
+		display: block;
+	}
+
+	/**
+	* Correct the font size and margin on `h1` elements within `section` and
+	* `article` contexts in Chrome, Firefox, and Safari.
+	*/
+
+	h1 {
+		font-size: 2em;
+		margin: 0.67em 0;
+	}
+
+	/* Grouping content
+	========================================================================== */
+
+	/**
+	* Add the correct display in IE 9-.
+	* 1. Add the correct display in IE.
+	*/
+
+	figcaption,
+	figure,
+	main { /* 1 */
+		display: block;
+	}
+
+	/**
+	* Add the correct margin in IE 8.
+	*/
+
+	figure {
+		margin: 1em 40px;
+	}
+
+	/**
+	* 1. Add the correct box sizing in Firefox.
+	* 2. Show the overflow in Edge and IE.
+	*/
+
+	hr {
+		box-sizing: content-box; /* 1 */
+		height: 0; /* 1 */
+		overflow: visible; /* 2 */
+	}
+
+	/**
+	* 1. Correct the inheritance and scaling of font size in all browsers.
+	* 2. Correct the odd `em` font sizing in all browsers.
+	*/
+
+	pre {
+		font-family: monospace, monospace; /* 1 */
+		font-size: 1em; /* 2 */
+	}
+
+	/* Text-level semantics
+	========================================================================== */
+
+	/**
+	* 1. Remove the gray background on active links in IE 10.
+	* 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+	*/
+
+	a {
+		background-color: transparent; /* 1 */
+		-webkit-text-decoration-skip: objects; /* 2 */
+	}
+
+	/**
+	* 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+	* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+	*/
+
+	abbr[title] {
+		border-bottom: none; /* 1 */
+		text-decoration: underline; /* 2 */
+		text-decoration: underline dotted; /* 2 */
+	}
+
+	/**
+	* Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+	*/
+
+	b,
+	strong {
+		font-weight: inherit;
+	}
+
+	/**
+	* Add the correct font weight in Chrome, Edge, and Safari.
+	*/
+
+	b,
+	strong {
+		font-weight: bolder;
+	}
+
+	/**
+	* 1. Correct the inheritance and scaling of font size in all browsers.
+	* 2. Correct the odd `em` font sizing in all browsers.
+	*/
+
+	code,
+	kbd,
+	samp {
+		font-family: monospace, monospace; /* 1 */
+		font-size: 1em; /* 2 */
+	}
+
+	/**
+	* Add the correct font style in Android 4.3-.
+	*/
+
+	dfn {
+		font-style: italic;
+	}
+
+	/**
+	* Add the correct background and color in IE 9-.
+	*/
+
+	mark {
+		background-color: #ff0;
+		color: #000;
+	}
+
+	/**
+	* Add the correct font size in all browsers.
+	*/
+
+	small {
+		font-size: 80%;
+	}
+
+	/**
+	* Prevent `sub` and `sup` elements from affecting the line height in
+	* all browsers.
+	*/
+
+	sub,
+	sup {
+		font-size: 75%;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+
+	sub {
+		bottom: -0.25em;
+	}
+
+	sup {
+		top: -0.5em;
+	}
+
+	/* Embedded content
+	========================================================================== */
+
+	/**
+	* Add the correct display in IE 9-.
+	*/
+
+	audio,
+	video {
+		display: inline-block;
+	}
+
+	/**
+	* Add the correct display in iOS 4-7.
+	*/
+
+	audio:not([controls]) {
+		display: none;
+		height: 0;
+	}
+
+	/**
+	* Remove the border on images inside links in IE 10-.
+	*/
+
+	img {
+		border-style: none;
+	}
+
+	/**
+	* Hide the overflow in IE.
+	*/
+
+	svg:not(:root) {
+		overflow: hidden;
+	}
+
+	/* Forms
+	========================================================================== */
+
+	/**
+	* Remove the margin in Firefox and Safari.
+	*/
+
+	button,
+	input,
+	optgroup,
+	select,
+	textarea {
+		margin: 0;
+	}
+
+	/**
+	* Show the overflow in IE.
+	* 1. Show the overflow in Edge.
+	*/
+
+	button,
+	input { /* 1 */
+		overflow: visible;
+	}
+
+	/**
+	* Remove the inheritance of text transform in Edge, Firefox, and IE.
+	* 1. Remove the inheritance of text transform in Firefox.
+	*/
+
+	button,
+	select { /* 1 */
+		text-transform: none;
+	}
+
+	/**
+	* 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+	*    controls in Android 4.
+	* 2. Correct the inability to style clickable types in iOS and Safari.
+	*/
+
+	button,
+	html [type=&quot;button&quot;], /* 1 */
+	[type=&quot;reset&quot;],
+	[type=&quot;submit&quot;] {
+		-webkit-appearance: button; /* 2 */
+	}
+
+	/**
+	* Remove the inner border and padding in Firefox.
+	*/
+
+	button::-moz-focus-inner,
+	[type=&quot;button&quot;]::-moz-focus-inner,
+	[type=&quot;reset&quot;]::-moz-focus-inner,
+	[type=&quot;submit&quot;]::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+
+	/**
+	* Restore the focus styles unset by the previous rule.
+	*/
+
+	button:-moz-focusring,
+	[type=&quot;button&quot;]:-moz-focusring,
+	[type=&quot;reset&quot;]:-moz-focusring,
+	[type=&quot;submit&quot;]:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
+
+	/**
+	* 1. Correct the text wrapping in Edge and IE.
+	* 2. Correct the color inheritance from `fieldset` elements in IE.
+	* 3. Remove the padding so developers are not caught out when they zero out
+	*    `fieldset` elements in all browsers.
+	*/
+
+	legend {
+		box-sizing: border-box; /* 1 */
+		color: inherit; /* 2 */
+		display: table; /* 1 */
+		max-width: 100%; /* 1 */
+		padding: 0; /* 3 */
+		white-space: normal; /* 1 */
+	}
+
+	/**
+	* 1. Add the correct display in IE 9-.
+	* 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+	*/
+
+	progress {
+		display: inline-block; /* 1 */
+		vertical-align: baseline; /* 2 */
+	}
+
+	/**
+	* Remove the default vertical scrollbar in IE.
+	*/
+
+	textarea {
+		overflow: auto;
+	}
+
+	/**
+	* 1. Add the correct box sizing in IE 10-.
+	* 2. Remove the padding in IE 10-.
+	*/
+
+	[type=&quot;checkbox&quot;],
+	[type=&quot;radio&quot;] {
+		box-sizing: border-box; /* 1 */
+		padding: 0; /* 2 */
+	}
+
+	/**
+	* Correct the cursor style of increment and decrement buttons in Chrome.
+	*/
+
+	[type=&quot;number&quot;]::-webkit-inner-spin-button,
+	[type=&quot;number&quot;]::-webkit-outer-spin-button {
+		height: auto;
+	}
+
+	/**
+	* 1. Correct the odd appearance in Chrome and Safari.
+	* 2. Correct the outline style in Safari.
+	*/
+
+	[type=&quot;search&quot;] {
+		-webkit-appearance: textfield; /* 1 */
+		outline-offset: -2px; /* 2 */
+	}
+
+	/**
+	* Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+	*/
+
+	[type=&quot;search&quot;]::-webkit-search-cancel-button,
+	[type=&quot;search&quot;]::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+
+	/**
+	* 1. Correct the inability to style clickable types in iOS and Safari.
+	* 2. Change font properties to `inherit` in Safari.
+	*/
+
+	::-webkit-file-upload-button {
+		-webkit-appearance: button; /* 1 */
+		font: inherit; /* 2 */
+	}
+
+	/* Interactive
+	========================================================================== */
+
+	/*
+	* Add the correct display in IE 9-.
+	* 1. Add the correct display in Edge, IE, and Firefox.
+	*/
+
+	details, /* 1 */
+	menu {
+		display: block;
+	}
+
+	/*
+	* Add the correct display in all browsers.
+	*/
+
+	summary {
+		display: list-item;
+	}
+
+	/* Scripting
+	========================================================================== */
+
+	/**
+	* Add the correct display in IE 9-.
+	*/
+
+	canvas {
+		display: inline-block;
+	}
+
+	/**
+	* Add the correct display in IE.
+	*/
+
+	template {
+		display: none;
+	}
+
+	/* Hidden
+	========================================================================== */
+
+	/**
+	* Add the correct display in IE 10-.
+	*/
+
+	[hidden] {
+		display: none;
+	}
+ }" data-collapsed="@mixin normalize() { ... }"><code>@mixin normalize() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Outputs Normalize rules.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://necolas.github.io/normalize.css/">https://necolas.github.io/normalize.css/</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-padding-x"><h3 class="item__heading"><a class="item__name" href="#mixin-padding-x">padding-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin padding-x($value: 0) { 
+	@include property-x(padding, $value);
+ }" data-collapsed="@mixin padding-x($value: 0) { ... }"><code>@mixin padding-x($value: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Applies padding-right and -left at once.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Value</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-property-x"><code>property-x</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-padding-y"><h3 class="item__heading"><a class="item__name" href="#mixin-padding-y">padding-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin padding-y($value: 0) { 
+	@include property-y(padding, $value);
+ }" data-collapsed="@mixin padding-y($value: 0) { ... }"><code>@mixin padding-y($value: 0) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Value</code></td><td data-label="default"><code>0</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-property-y"><code>property-y</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-property-multi"><h3 class="item__heading"><a class="item__name" href="#mixin-property-multi">property-multi</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin property-multi($property, $list, $value) { 
+	@each $item in $list {
+		#{$property}-#{$item}: $value;
+	}
+ }" data-collapsed="@mixin property-multi($property, $list, $value) { ... }"><code>@mixin property-multi($property, $list, $value) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets multiple subproperties at once.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$property</code></th><td data-label="desc"><p>Property name</p></td><td data-label="type"><code>Property</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$list</code></th><td data-label="desc"><p>List of subproperties</p></td><td data-label="type"><code>List<property></property></code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>Value to be assigned to all subproperties</p></td><td data-label="type"><code>Value</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-property-x"><code>property-x</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-property-y"><code>property-y</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-property-x"><h3 class="item__heading"><a class="item__name" href="#mixin-property-x">property-x</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin property-x($property, $value) { 
+	@include property-multi($property, (right, left), $value);
+ }" data-collapsed="@mixin property-x($property, $value) { ... }"><code>@mixin property-x($property, $value) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set -right and -left properties at once.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$property</code></th><td data-label="desc"><p>Property name</p></td><td data-label="type"><code>Property</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>Value to be assigned to -right and -left</p></td><td data-label="type"><code>Value</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-property-multi"><code>property-multi</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-margin-x"><code>margin-x</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-padding-x"><code>padding-x</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-property-y"><h3 class="item__heading"><a class="item__name" href="#mixin-property-y">property-y</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin property-y($property, $value) { 
+	@include property-multi($property, (top, bottom), $value);
+ }" data-collapsed="@mixin property-y($property, $value) { ... }"><code>@mixin property-y($property, $value) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set -top and -bottom properties at once.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$property</code></th><td data-label="desc"><p>Property name</p></td><td data-label="type"><code>Property</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>Value to be assigned to -top and -bottom</p></td><td data-label="type"><code>Value</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-property-multi"><code>property-multi</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-margin-y"><code>margin-y</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-padding-y"><code>padding-y</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section><section class="main__item container item" id="undefined-mixin-reset"><h3 class="item__heading"><a class="item__name" href="#mixin-reset">reset</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin reset() { 
+	html,
+	:root {
+		box-sizing: border-box;
+	}
+
+	html {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		min-height: 100%;
+	}
+
+	body {
+		margin: 0;
+		min-height: 100%;
+	}
+
+	* {
+		&amp;,
+		&amp;:before,
+		&amp;:after {
+			box-sizing: inherit;
+		}
+	}
+
+	html,
+	body,
+	img,
+	abbr,
+	acronym {
+		border: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 100%;
+		font-weight: normal;
+	}
+
+	h1:first-child,
+	h2:first-child,
+	h3:first-child,
+	h4:first-child,
+	h5:first-child,
+	h6:first-child,
+	p:first-child {
+		margin-top: 0;
+	}
+
+	h1:last-child,
+	h2:last-child,
+	h3:last-child,
+	h4:last-child,
+	h5:last-child,
+	h6:last-child,
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	th,
+	code,
+	cite,
+	caption {
+		font-weight: normal;
+		font-style: normal;
+		text-align: left;
+	}
+
+	address {
+		font-style: normal;
+	}
+
+	textarea {
+		resize: vertical;
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+	}
+
+	fieldset {
+		// Changes fieldsets to remove min-content min-width.
+		margin: 0;
+		padding: 0;
+		min-width: auto;
+		border: none;
+	}
+
+	input {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+
+		&amp;:focus,
+		&amp;[type=&quot;search&quot;]:focus {
+			outline-offset: -2px;
+		}
+
+		&amp;[type=&quot;search&quot;] {
+			appearance: none;
+			box-sizing: border-box;
+
+			&amp;::-webkit-clear-button {
+				display: none;
+			}
+		}
+
+		&amp;[type=&quot;number&quot;] {
+			-moz-appearance: textfield !important;
+
+			&amp;::-webkit-inner-spin-button,
+			&amp;::-webkit-outer-spin-button {
+				display: none;
+			}
+		}
+	}
+
+	select {
+		cursor: pointer;
+		appearance: none;
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+
+		&amp;::-ms-expand {
+			display: none;
+		}
+	}
+
+	img,
+	video {
+		max-width: 100%;
+	}
+
+	img {
+		object-fit: cover;
+		font-family: &quot;object-fit: cover;&quot;;
+	}
+
+	figure,
+	blockquote {
+		margin: 0;
+	}
+
+	summary {
+		// Removes the arrow from the &lt;summary&gt; element.
+		display: block;
+	}
+
+	button {
+		font-size: inherit;
+	}
+
+	a {
+		color: currentColor;
+		text-decoration: none;
+	}
+
+	ul,
+	ol {
+		margin: 0;
+		padding: 0;
+	}
+
+	svg,
+	symbol {
+		fill: currentColor;
+	}
+
+	template {
+		display: none;
+	}
+
+	canvas {
+		display: block;
+		outline: none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+	}
+ }" data-collapsed="@mixin reset() { ... }"><code>@mixin reset() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Outputs frequently used reset rules.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Authors</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li><li><p>Tom (Alfie) Gaskill</p></li><li><p>Mike Masey</p></li></ul></section><section class="main__item container item" id="undefined-mixin-size"><h3 class="item__heading"><a class="item__name" href="#mixin-size">size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin size($width: 0, $height: $width) { 
+	width: $width;
+	height: $height;
+ }" data-collapsed="@mixin size($width: 0, $height: $width) { ... }"><code>@mixin size($width: 0, $height: $width) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sets <code>width</code> and <code>height</code>.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>0</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$height</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$width</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Input</p></div><pre class="example__code language-scss"><code>.square {
+	@include size(1em);
+}
+
+.rectangle {
+	@include size(2em, 1em);
+}</code></pre></div><div class="item__example example"><div class="example__description"><p>Output</p></div><pre class="example__code language-css"><code>.square {
+	width: 1em;
+	height: 1em;
+}
+
+.rectangle {
+	width: 2em;
+	height: 1em;
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-absolute-fill"><code>absolute-fill</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#layout-mixin-fixed-fill"><code>fixed-fill</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-arrow"><code>arrow</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Calvin Davis</p></li></ul></section></section><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-gort-default-base-font-size"><h3 class="item__heading"><a class="item__name" href="#variable-gort-default-base-font-size">gort-default-base-font-size</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$gort-default-base-font-size: 16 !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default base <code>font-size</code> px value.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Mike Masey</p></li></ul></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-em"><h3 class="item__heading"><a class="item__name" href="#function-em">em</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function em($px, $browser-context: $gort-default-base-font-size) { 
+	@return ($px / $context) * 1em;
+ }" data-collapsed="@function em($px, $browser-context: $gort-default-base-font-size) { ... }"><code>@function em($px, $browser-context: $gort-default-base-font-size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Converts a px value to em value.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$px</code></th><td data-label="desc"><p>Pixel value</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$browser-context</code></th><td data-label="desc"><p>Base font size</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$gort-default-base-font-size</code></td></tr></tbody></table><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Mike Masey</p></li></ul></section><section class="main__item container item" id="undefined-function-rem"><h3 class="item__heading"><a class="item__name" href="#function-rem">rem</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function rem($px, $browser-context: $gort-default-base-font-size) { 
+	@return ($px / $context) * 1rem;
+ }" data-collapsed="@function rem($px, $browser-context: $gort-default-base-font-size) { ... }"><code>@function rem($px, $browser-context: $gort-default-base-font-size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Converts a px value to rem value.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$px</code></th><td data-label="desc"><p>Pixel value</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$browser-context</code></th><td data-label="desc"><p>Base font size</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$gort-default-base-font-size</code></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#typography-mixin-font-sizing"><code>font-sizing</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Mike Masey</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Gort</span><!-- Version --><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
