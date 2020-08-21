@@ -1,0 +1,25 @@
+@include test-module("letter-spacing") {
+	@include test("one-property") {
+		@include assert {
+			@include output {
+				letter-spacing: letter-spacing(16);
+			}
+
+			@include expect {
+				letter-spacing: 1em;
+			}
+		}
+	}
+
+	@include test("two-properties") {
+		@include assert {
+			@include output {
+				letter-spacing: letter-spacing(16, 8);
+			}
+
+			@include expect {
+				letter-spacing: 2em;
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+////
+/// @group layout
+/// @author Mike Masey
+////
+
+@import "gort-default-column-count";
+
+/// Returns percentage size values for columns.
+/// @param {Number} $columns - Columns
+/// @param {Number} $column-count - [$gort-default-column-count] Column count
+@function columns($columns, $column-count: $gort-default-column-count) {
+	@return #{100% / $column-count * $columns};
+}
